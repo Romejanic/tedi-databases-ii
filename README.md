@@ -1,3 +1,3 @@
-# tedi-computational-thinking
+# tedi-python-cc
 
-Yes the repo name is wrong but this is the Computational Thinking site
+I got the repo name right this time yay

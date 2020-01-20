@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Python Crash Course &mdash; TEDI London</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">	 -->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="../css/flexslider.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="../index.html">TEDI<span>.</span></a></div>
+						</div>
+						<div class="col-xs-10 text-right menu-1">
+							<ul>
+								<li><a href="../index.html">Home</a></li>
+								<li><a href="../set_up.html">Setup</a></li>
+								<li class="active has-dropdown"><a href="index.html">Lessons</a>
+									<ul class="dropdown">
+										<li><a href="gday.html">Let's say G'day</a></li>
+										<li><a href="string_ops.html">String Operations</a></li>
+										<li><a href="conditions.html">Conditions and Nesting</a></li>
+										<li><a href="indenting.html">Indenting</a></li>
+										<li><a href="lists_loops.html">Lists and Loops</a></li>
+										<li><a href="magic.html">Removing Magic Numbers</a></li>
+										<li><a href="functions.html">Functions</a></li>
+									</ul>
+								</li>
+								<li class="btn-cta"><a href="../assessment.html"><span>Assessment</span></a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="fh5co-wireframe">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Removing Magic Numbers</h2>
+				</div>
+			</div>
+			<div class="row">
+				<!--
+				<div class="col-md-5 animate-box">
+					<div class="user-frame">
+						<img src="../images/examples/ozzy_ozzy_ozzy.png" alt="oi oi oi" width="300">
+					</div>
+				</div>
+				-->
+				<div class="col-md-16 animate-box">
+					<p>
+						Let’s say I wanted to add two numbers together, 3 and 4. How could I do this in python?
+						<br>
+						<pre>
+3 + 4 
+						</pre>
+						Let’s say I wanted to take that value and multiply it by a scale factor of 100? I’d save the
+						output as a variable and then proceed. 
+						<br>
+						<pre>
+x = 3 + 4
+x * 100
+						</pre>
+						Then I wanted to multiply that number by the first number that I added (3).
+						<br>
+						<pre>
+w = 3+ 4
+x = w * 100
+x / 3
+						</pre>
+						Then I wanted to subtract the second number that I added (4)
+						<br>
+						<pre>
+w = 3 + 4
+x = w* 100
+y = x / 3
+z = y – 4 
+						</pre>
+						That’s an awesome program. But whoops – I made a mistake (sorry). I didn’t actually want you to add
+						3 and 4, instead I wanted you to add 6 and 7.
+						How many numbers do we have to change in this program to make it right? 
+						<br>
+						<b>A:</b> 4. 
+						<br><br>
+						What if we used even more variables to start with?
+						<br>
+						<pre>
+first_number = 3 
+second_number = 4
+w = first + second_number 
+x = w * 100 
+y = x / first_number
+z = y – second_number
+						</pre>
+						With this code how many numbers would we have to change? 
+						<br>
+						<b>A:</b> 2. 
+						<br><br>
+						How many magic numbers do we have left? 
+						<br>
+						<b>A:</b> 1.
+						<br><br>
+						<div class="md-form">
+							<label for="form1">
+								<u>Exercise:</u><br>
+								Rewrite the above script, removing all magic numbers
+							</label>
+							<textarea id="form1" class="md-textarea form-control" rows="3"></textarea>
+						</div> 
+
+						<span id="tbr-hidden">
+							<br>
+							<b><u>Solution</u></b><br>
+							<pre>
+first_number = 3 
+second_number = 4
+scale_factor = 100
+w = first + second_number 
+x = w * scale_factor
+y = x / first_number
+z = y – second_number
+							</pre>
+							(The magic number 100 has been replaced by a variable called <code>scale_factor</code>).
+						</span>
+
+					</p><br>
+
+					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-text="Next: Functions" tbr-href="functions.html">See Solution</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="../js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="../js/jquery.flexslider-min.js"></script>
+	<!-- Main -->
+	<script src="../js/main.js"></script>
+	<!-- Reveal -->
+	<script src="../js/reveal.js"></script>
+
+	</body>
+</html>

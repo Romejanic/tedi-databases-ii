@@ -113,10 +113,179 @@
 				-->
 				<div class="col-md-12 animate-box">
 					<p>
-						
-					</p><br>
+						Now that we’ve introduced you to the concept of strings, let’s see what we can do with them. Each
+						of these operations take in a string as input and return something.
+						<br><br>
+						<i>The structure is:</i> 
+						<pre>
+CaptureVariable = inputstring.function(additionalInputs)
+						</pre><br>
+						<i>In laymans terms:</i> 
+						<pre>
+The Thing We Want = The Original String . The operation (Any Extra Information)
+						</pre><br>
+						We’ll see this in practice soon where it will make more sense. 
+						<br><br>
+						<h2>Sample String Operations</h2>
+						<table>
+							<tr style="font-weight: bold">
+								<td>Function Name</td>
+								<td>Description</td>
+							</tr>
+							<tr>
+								<td><code>string.islower()</code></td>
+								<td>
+									Checks if all letters in a string are in lowercase. Takes in a string. Returns either
+									a <code>True</code> or a <code>False</code>.
+								</td>
+							</tr>
+							<tr>
+								<td><code>string.isupper()</code></td>
+								<td>
+									Checks if all letters in a string are in uppercase. Takes in a string. Returns either
+									a <code>True</code> or a <code>False</code>.
+								</td>
+							</tr>
+							<tr>
+								<td><code>string.lower()</code></td>
+								<td>
+									Converts a string to lowercase. Takes in a string. Outputs a string.
+								</td>
+							</tr>
+							<tr>
+								<td><code>string.upper()</code></td>
+								<td>
+									Converts a string to uppercase. Takes in a string. Outputs a string.
+								</td>
+							</tr>
+							<tr>
+								<td><code>string.strip([chars])</code></td>
+								<td>
+									Removes the whitespace around a string, or if you pass a character, removes each instance
+									of that character. Takes in a string. Outputs a string. 
+								</td>
+							</tr>
+							<tr>
+								<td><code>float(&lt;string&gt;)</code></td>
+								<td>
+									Converts a string into a float. Takes in a string. Outputs a float.
+								</td>
+							</tr>
+							<tr>
+								<td><code>int(&lt;string&gt;)</code></td>
+								<td>
+									Converts a string into a integer. Takes in a string. Outputs an integer.
+								</td>
+							</tr>
+							<tr>
+								<td><code>string.count(&lt;substring&gt;)</code></td>
+								<td>
+									Counts the number of instances of a given string. Takes in a string and a substring.
+									Returns an integer. 
+								</td>
+							</tr>
+							<tr>
+								<td><code>len(&lt;string&gt;)</code></td>
+								<td>
+									Counts the number of characters in a string. Takes in a string.
+									Returns an integer. 
+								</td>
+							</tr>
+						</table>
+						<br>
+						One of the beauties of Python is that all of these operations are included in the language. This is not
+						the case for all programming languages – in some of them you would have to write these functions from
+						scratch. We’ll teach you how to in later chapters.
+						<br><br>
+						<b><u>Activity: Are they angry?</u></b><br>
+						Vivian doesn’t like to open angry emails – they stress her out. So she has decided to write a program
+						to check if an email is really angry before opening it. 
+						<br><br>
+						Let’s say the email is saved as a string called e. Then, let’s check if e is yelling. 
+						<pre>
+e = ‘VIVIAN, WHAT WERE YOU THINKING?’ 
 
-					<p><a class="btn btn-primary btn-lg btn-demo" href="conditions.html">Next: Conditions and Nesting</a>
+e.isupper() 
+result = e.isupper()
+
+print(result) 
+						</pre>
+						Change e, and see the impact. 
+						<br><br>
+						<b><u>Activity: Email Address</u></b><br> 
+						My mum’s email address is <code>viviansmum@email.com</code><br>
+						However when she’s logging in she often types <code>VIVIANSMUM@email.com</code> 
+						<br><br>
+						It’s 1999, and Vivian’s worried that the email logins are case sensitive.<br>
+						<div class="md-form">
+							<label for="form1">
+								Write a program that take an email address e; and checks if it was written in all lowercase.
+							</label>
+							<textarea id="form1" class="md-textarea form-control" rows="3"></textarea>
+						</div>
+						<br>
+						<b><u>Activity: Stop yelling</u></b><br> 
+						Sometimes Ted sends angry emails. He wants to apply a filter to all the emails that he sends so
+						that he never yells at anyone in an email when angry. 
+						<br><br>
+						Given a string, say x, toLower will produce a string that converts each character to lowercase.<br>
+						In this case, Ted has saved his email as a string in the variable e.
+						<br> 
+						<pre>
+e = ‘Dear Billie, As per my PREVIOUS EMAIL, we CANNOT move forward with the proposed plans. I HOPE this email finds you well.’
+						</pre>
+						<br>
+						<h2>Input and Output</h2> 
+						To take in input,  use the function <code>input()</code><br>
+						You can store that input in a variable.
+						<br><br>
+						Below is a basic use-case. 
+						<pre>
+val = input("Enter your value: ") 
+print(val) 
+						</pre>
+						<br>
+						Let’s try again. 
+						<pre>
+name = input(“What is your name?:”)
+print(“Hello” + name)
+						</pre>
+						<br>
+						<div class="md-form">
+							<label for="form2">
+								<u>Question 1</u>: Create a program that takes in a users age as input, and then prints out
+								how old they will be in 20 years.
+							</label>
+							<textarea id="form2" class="md-textarea form-control" rows="3"></textarea>
+						</div>
+
+						<span id="tbr-hidden">
+							<br>
+							<b><u>Solution:</u></b>
+							<pre> 
+age = input(“How old are you?”)
+age = int(age) + 20
+print(age)
+							</pre>
+							<br>
+							<div class="md-form">
+								<label for="form3">
+									<u>Question 2</u>: Create a program that takes in a user’s favourite colour and name, and
+									prints a new string that replaces all the vowels in their name with their favourite number. 
+								</label>
+								<textarea id="form3" class="md-textarea form-control" rows="3"></textarea>
+								<u>Example:</u> <br>
+								My name is Vivian my favourite number is 2<br>
+								So your program should print:<br>
+								<code>V2V22N</code><br>
+								If my favourite number was 247 your program should print:<br>
+								<code>V247V247247N</code>
+							</div>
+						</span>
+
+						</p>
+						<br>
+					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-href="conditions.html" tbr-text="Next: Conditions and Nesting">See Solution</a>
 
 				</div>
 			</div>
@@ -142,6 +311,8 @@
 	<script src="../js/jquery.flexslider-min.js"></script>
 	<!-- Main -->
 	<script src="../js/main.js"></script>
+	<!-- Reveal -->
+	<script src="../js/reveal.js"></script>
 
 	</body>
 </html>

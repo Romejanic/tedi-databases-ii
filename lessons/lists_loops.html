@@ -113,10 +113,108 @@
 				-->
 				<div class="col-md-16 animate-box">
 					<p>
-						yeeeeeeeee
+						<h3>Lists</h3><br>
+						Lists are similar to arrays in application. Arrays were covered in [INSERT NODE NUMBER], so they
+						will not be explained in depth here. To use an array in python, you need to import a package that
+						has them (for example NumPy). Since Lists are a part of the core programming language, they will be
+						covered in this crash course instead. For more examples with Arrays see the C or Java crash courses. 
+						<br><br>
+						One of the ways that we can store all of the data that we may collect, is through a list.<br>
+						A list is created by placing all the items inside a square bracket [ ], separated by commas.
+						<br>
+						<pre>
+# empty list
+my_list = []
+
+# list of integers
+my_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# list of names 
+my_mates = [‘Laurence’, ‘Clare’, ‘Nick’,’Mariam’,’Kelsey’,’Adin’, ‘David’, ‘Zeena’, ‘Brian’]							
+						</pre>
+						<br>
+						<b>How do we access elements?</b>
+						<pre>
+print(my_mates[0])
+# Will print Laurence. 
+
+ListName[Index]
+						</pre>
+						Remember, in all respected programming languages, indexing starts at 0.
+						<br><br>
+						<div class="md-form">
+							<label for="form1">
+								How would you print ‘Zeena’ from <code>my_mates</code>?
+							</label>
+							<textarea id="form1" class="md-textarea form-control" rows="3"></textarea>
+						</div>
+						<br>
+						<div class="md-form">
+							<label for="form2">
+								How would you print 5 from <code>my_numbers</code>?
+							</label>
+							<textarea id="form2" class="md-textarea form-control" rows="3"></textarea>
+						</div>
+						<br><br>
+						<h3>Loops</h3><br>
+						Now, let’s print out the names of all my friends. 
+						<pre>
+print(my_mates(0))
+print(my_mates(1))
+print(my_mates(2))
+print(my_mates(3))
+print(my_mates(4))
+print(my_mates(5))
+print(my_mates(6))
+print(my_mates(7))
+print(my_mates(8))
+						</pre>
+						<br>
+						That’s a bit tedious, and programmers are lazy – so let’s not do that.
+						Can we just tell our program, do the same thing again and again? Yes indeed.
+						<br><br>
+						<pre>
+for friend in my_mates: 
+	print(friend)
+						</pre>
+						<br>
+						Wow, that’s easy.<br>
+						<code>friend</code> is a variable that you set in the loop. The for loop iterates through every
+						element in the list you give it and stores the current item in the variable <code>friend</code>.
+						<br><br>
+						<b><u>Exercise:</u></b><br>
+						<div class="md-form">
+							<label for="form3">
+								Print all the numbers in the list of numbers
+							</label>
+							<textarea id="form3" class="md-textarea form-control" rows="3"></textarea>
+						</div>
+
+						<span id="tbr-hidden">
+							<br>
+							<b><u>Solution</u></b><br>
+							<pre>
+
+for x in my_numbers:
+	print(x)
+							</pre>
+							<br><br>
+							<div class="md-form">
+								<label for="form4">
+									<b><u>Exercise: Student Emails</u></b><br>
+									You need to send an email to all of the students taking this course. All you know are their
+									TEDI student numbers. There are 500 of them! And you know all emails are in the following
+									format:
+									<br>
+									StudentNumber@student.TEDI.com.uk
+								</label>
+								<textarea id="form4" class="md-textarea form-control" rows="3"></textarea>
+							</div> 
+						</span>
+
 					</p><br>
 
-					<p><a class="btn btn-primary btn-lg btn-demo" href="lists_loops.html">Next: Removing Magic Numbers</a>
+					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-text="Next: Removing Magic Numbers" tbr-href="magic.html">See Solution</a>
 
 				</div>
 			</div>
@@ -142,6 +240,8 @@
 	<script src="../js/jquery.flexslider-min.js"></script>
 	<!-- Main -->
 	<script src="../js/main.js"></script>
+	<!-- Reveal -->
+	<script src="../js/reveal.js"></script>
 
 	</body>
 </html>

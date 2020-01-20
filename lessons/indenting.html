@@ -111,10 +111,132 @@
 				</div>
 				<div class="col-md-7 animate-box">
 					<p>
-						
+						One other thing to note, is the use of ‘indenting’. Some programming languages use brackets to
+						group things together. 
+						<br><br>
+						For example:  
+						<pre>
+If (time == morning){
+	print “Good Morning” 
+	X + y 
+}
+print “Goodbye” 
+						</pre>
+						<br>
+						The brackets in this case group together a set of instructions, related to the if statement. It
+						will only print good morning and add x + y, if the condition is met – otherwise it will skip
+						through to the goodbye. 
+						<br><br>
+						If the condition is met, it will print good morning, then add x and y, then print goodbye. 
+						<br>
+						If you wanted to change the code, so it only printed goodbye if it wasn’t morning you could
+						do the following:
+						<pre>
+If (time == morning){
+	print “Good Morning” 
+	X + y 
+} else {
+	print “Goodbye” 
+}
+						</pre>
+						In python however, brackets are not used to group things together. Instead – indenting is used. 
+						Indenting is either a space or tab that groups things together.
+					</p>
+				</div>
+				<div class="col-md-16 animate-box">
+					<p>
+					Let’s look at the following examples. 
+					<pre>
+Group 1
+Group 1
+	Group 2
+	Group 2 
+		Group 3
+		Group 3
+	Group 2
+Group 1
+	Group 4
+	Group 4
+		Group 5
+		Group 5
+			Group 6
+				Group 7
+			Group 6 
+		Group 5 
+	Group 4
+Group 1 
+					</pre>
+					When you go back an indent, you are essentially closing off a group. 
+					<br><br>
+					<b>So for example:</b>  
+					<pre>
+Group 1 {Open Group 1}
+	Group 2 {Open Group 2}
+		Group 3 {Open Group 3}
+			Group 4 {Open Group 4}
+		Group 3 {Exit group 4 – you cannot reenter it from this point} 
+		Group 3
+	Group 2 {Closes Group 3 – as with exit group 4} 
+		Group 5 {Open Group 5}
+	Group 2 {Closes group 5}
+Group 1 {Closes Group 1}  
+					</pre>
+					Indenting can be tricky to get the hang of, especially if python is your first programming language.
+					It’s a very important concept to get right however. We will go through several examples to assist
+					with this: 
+					<br><br>
+					<div class="md-form">
+						<label for="form1">
+							<u>Question 1:</u> 
+							<pre>
+If (python == language)
+	Print(“use indents”)
+		If (time == day)
+			Print(“it’s night”)
+		Else
+			Print(“it’s deceitful”) 
+Print (“See ya”)
+							</pre>
+							What is the output with the following variables?
+							<br><br>
+							<i>1a.</i>  Language = Python<br>
+							Time = Night<br> 
+							<br>
+							<i>1b.</i>  Language = Java<br>
+							Time = Day<br>
+							<br>
+							<i>1c.</i>  Language = Python<br>
+							Time = Day
+						</label>
+						<textarea id="form1" class="md-textarea form-control" rows="3">
+1a. [answer]
+1b. [answer]
+1c. [answer]
+						</textarea>
+					</div>
+					<span id="tbr-hidden-1">
+						<br>
+						<h3>Solution:</h3><br>
+						<u>1a.</u><br>
+						If the language is python, you enter the first if statement, and print use indents. The next if statement
+						is if time == day, which our time does not, so we ignore it, as well as everything indented within it.<br>
+						Then we look to the else statement, we fulfill else, so we print it’s deceitful. Then we exit the if
+						statement, and finally print “See ya”
+						<br><br>
+						<u>1b.</u><br>
+						If the language is java, then you don’t enter the if statement, so you ignore it as well as everything
+						indented within it. You then move down to the next line within the same level of indentation and print
+						see ya. The time = Day variable did not get a chance to be used. 
+						<br><br>
+						<u>1c.</u><br> 
+						If the language is python, you enter the first if statement, and print use indents. The next if statement
+						is if time == day, which our time does, so we print “It’s night”. We then skip the else, since we me the
+						condition for the if. We move out of this level of indent, until we get to print “See ya”. 
+					</span>
+
 					</p><br>
 
-					<p><a class="btn btn-primary btn-lg btn-demo" href="lists_loops.html">Next: Lists and Loops</a>
+					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-count="2" tbr-text="Next: Lists and Loops" tbr-href="lists_loops.html">See Solution</a>
 
 				</div>
 			</div>
@@ -140,6 +262,8 @@
 	<script src="../js/jquery.flexslider-min.js"></script>
 	<!-- Main -->
 	<script src="../js/main.js"></script>
+	<!-- Reveal -->
+	<script src="../js/reveal.js"></script>
 
 	</body>
 </html>

@@ -104,26 +104,140 @@
 				</div>
 			</div>
 			<div class="row">
-				<!--
 				<div class="col-md-5 animate-box">
 					<div class="user-frame">
-						<img src="../images/examples/ozzy_ozzy_ozzy.png" alt="oi oi oi" width="300">
+						<img src="../images/examples/func.png" alt="f(x)" width="300">
+						<p>Like this one, but harder!</p>
 					</div>
 				</div>
-				-->
 				<div class="col-md-16 animate-box">
 					<p>
+						You would have learnt in the ‘Computational Thinking’ workshop, that one of the fundamental principles
+						underpinning computational thinking is pattern recognition. One of the key advantages to learning the
+						skills of pattern recognition, is the ability to avoid repeating the same lines of code over and over
+						again. We do this with functions. 
+						<br><br>
+						<b>Let’s say you have the following code:</b> 
+						<br>
+						Say G’day to everyone you meet, then put it on record that you said g’day to them, then add them as a
+						friend, if you’re not already friends with them.
+						<pre>
+peopleInRoom = [“Barbra Anne”, “Billy Jean”, “Jolene”, “Delilah”, “Jesse”]
+
+newperson = peopleInRoom[0]
+print(“G’day ” +  newperson)
+helloRecord.append(newperson)
+							
+if((newperson in friends) == False ):
+	friends.append(newperson)
+else:
+	#doNothing? 
+							
+newperson = peopleInRoom[1]
+print(“G’day ” +  newperson)
+helloRecord.append(newperson)
+							
+if((newperson in friends) == False ):
+	friends.append(newperson)
+else:
+	#doNothing? 
+							
+newperson = peopleInRoom[2]
+print(“G’day ” +  newperson)
+helloRecord.append(newperson)
+							
+if((newperson in friends) == False ):
+	friends.append(newperson)
+else:
+	#doNothing? 
+							
+newperson = peopleInRoom[3]
+print(“G’day ” +  newperson)
+helloRecord.append(newperson)
+							
+if((newperson in friends) == False ):
+	friends.append(newperson)
+else:
+	#doNothing? 								
+						</pre>
+						and so on.
+						<br>
+						Let's condense this code.
+						<pre>				
+def MeetSomeone(newPerson):
+	print(“G’day ” +  newperson)
+	helloRecord.append(newperson)
+
+	if((newperson in friends) == False ):
+		friends.append(newperson)
+	else:
+		#doNothing? 
+
+newPerson = peopleInRoom[0]
+MeetSomeone(newPerson)
+newPerson = peopleInRoom[1]
+MeetSomeone(newPerson)
+newPerson = peopleInRoom[2]
+MeetSomeone(newPerson)
+						</pre>
+						and so on.
+						We can still do better. Remember our loops? 
+						<pre>
+def MeetSomeone(newPerson):
+	print(“G’day ” +  newperson)
+	helloRecord.append(newperson)
 						
+	if((newperson in friends) == False ):
+		friends.append(newperson)
+	else:
+	#doNothing? 
 
-						<span id="tbr-hidden">
-							<br>
-							<b><u>Solution</u></b><br>
+for newPerson in peopleInRoom:
+	MeetSomeone(newPerson)
+						</pre>
+						<br>
+						As you can see, functions are fantastic. We have condensed so many lines of code, into just a few.<br> 
+						So now that you understand the power of functions – and how they work in python – let’s practice with a
+						few unit conversion examples. 
+						<br><br>
+						<b><u>Activity: Unit Conversions</u></b><br>
+						Vivian’s friends make fun of her because she’s not great at unit conversions. They claim a ‘real
+						engineer’ needs to be able to convert between units. Let’s help her show them what a ‘real engineer’
+						can do – and write programs to automate the conversions! 
+						<br>
+						<pre>
+def kilometersToMeters(x):
+	y = x/1000
+	return y 
 
-						</span>
+def meterstomm(x):
+	y = x/1000
+	return y 
+
+def kilometersTomm(x):
+	y = kilmetersToMeters(x)
+	z = meterstomm(y)
+	return z
+						</pre>
+						<br>
+						In the third example, you can see we have actual nested functions. As you may know, to go from KM to MM
+						you could <i>decompose</i> the problem and think of it as <b>1.</b> Convert from km to m <b>2.</b> Convert
+						from m to mm.
+						<br><br>
+						<div class="md-form">
+							<label for="form3">
+								Write the functions for the following unit conversions:
+								<ul>
+									<li>Cm to nm</li>
+									<li>Km to nm</li>
+								</ul>
+							</label>
+							<textarea id="form3" class="md-textarea form-control" rows="3"></textarea>
+						</div>
 
 					</p><br>
 
-					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-text="You're done! (woohoo)" tbr-href="../index.html">See Solution</a>
+					<p><a class="btn btn-primary btn-lg btn-demo" href="../index.html">You're done! (woohoo)</a>
 
 				</div>
 			</div>
@@ -149,8 +263,6 @@
 	<script src="../js/jquery.flexslider-min.js"></script>
 	<!-- Main -->
 	<script src="../js/main.js"></script>
-	<!-- Reveal -->
-	<script src="../js/reveal.js"></script>
 
 	</body>
 </html>

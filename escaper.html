@@ -157,7 +157,8 @@
 			outputBox.innerHTML = esc;
 		};
 		document.getElementById("copy").onclick = () => {
-			navigator.clipboard.writeText(outputBox.innerHTML).then(() => {
+			let amp = /&amp;/g;
+			navigator.clipboard.writeText(outputBox.innerHTML.replace(amp, "&")).then(() => {
 				$("#copy-notif").show().text("- Copied!");
 			}, (err) => {
 				$("#copy-notif").show().text("- Failed! (see console)");

@@ -1,0 +1,44 @@
+.html-example {
+    width: 100%;
+    height: 400px;
+    background: #cecece;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+}
+.html-example .code {
+    float: left;
+    width: 25%;
+    height: 100%;
+    overflow: auto;
+    font-family: 'Inconsolata', monospace;
+    background: #929292;
+    border-radius: 10px 0px 0px 10px;
+    padding: 5px;
+}
+.html-example .code span.header {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #383838f6;
+    padding: 0px 3px;
+}
+.html-example .preview {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+.html-example .preview span.title {
+    width: 100%;
+    padding: 0px 5px;
+}
+.html-example .preview div.content {
+    background: white;
+    height: 100%;
+    flex: 1 1 auto;
+    border-radius: 0px 0px 10px;
+    font-family: monospace;
+    padding: 5px;
+}

@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Python Crash Course &mdash; TEDI London</title>
+	<title>HTML Crash Course &mdash; TEDI London</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -52,6 +52,10 @@
 	<!-- Modernizr JS -->
 	<script src="../js/modernizr-2.6.2.min.js"></script>
 
+	<!-- HTML Example -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/html-example.css" />
+
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -77,12 +81,9 @@
 								<li class="active has-dropdown"><a href="index.html">Lessons</a>
 									<ul class="dropdown">
 										<li><a href="gday.html">Let's say G'day</a></li>
-										<li><a href="string_ops.html">String Operations</a></li>
-										<li><a href="conditions.html">Conditions and Nesting</a></li>
-										<li><a href="indenting.html">Indenting</a></li>
-										<li><a href="lists_loops.html">Lists and Loops</a></li>
-										<li><a href="magic.html">Removing Magic Numbers</a></li>
-										<li><a href="functions.html">Functions</a></li>
+										<li><a href="structure.html">Adding structure</a></li>
+										<li><a href="images.html">Images</a></li>
+										<li><a href="connections.html">Making connections</a></li>
 									</ul>
 								</li>
 								<li class="btn-cta"><a href="../assessment.html"><span>Assessment</span></a></li>
@@ -111,121 +112,83 @@
 				</div>
 				<div class="col-md-7 animate-box">
 					<p>
-						As regular languages evolve over time, so too do programming languages (just at a faster
-						rate). This course will be in Python3 - many courses out there will teach you Python 2.
+						As per usual, our first step is to say hello!
 						<br><br>
-						Python is a programming language and the first step to learning any language is the ability
-						to say hello.
-						<br><br>
-						<b>So let’s say G’day...</b><br>
-						Here’s a classic that you will encounter time and time again:
-						<!-- unfortunately code blocks can't have any indentation in the HTML -->
-						<pre>
-print(‘Hello, World’)
-						</pre>
-						If you save this program, then run it through your terminal (see our ‘getting to know your terminal’
-						node for more assistance if you’re not sure how to do this yet), you should see the following output: 
-						<br>
-						<img src="../images/examples/gday.png" />
-						<br>
-						In this example, print is a function. That means it’s a set of instructions that will do the same thing
-						every time you call it. So every time you call the print function, it will expect a string between two
-						quotation marks or a variable.
-						<br><br>
-						Woah, hold on a minute! <b>What is a string? What is a variable?</b> This is covered in NODE X. A brief
-						definition is provided below: 
-						<br><br>
-
-						<b>A string</b><br>   
-						It’s a data type. It’s essentially a series of characters that usually form a word, or a sentence, or
-						they could be absolute gibberish. You typically place strings between two quotation marks. 
-						<br>
-						Here are some examples of strings:
-						<br><br>
-						<pre>
-‘Hello, World!’
-‘G’day Mate?’
-‘abcdefg’
-‘The swift brown fox jumped over the lazy log or something I don’t remember the actual sentence’
-‘This is a string’ 
-‘This is not a string’
-‘Isn’t that confusing, because it actually was a string?! Wow, mind blown’.
-						</pre>
-						<br>
-						<b><u>Activity:</u></b><br> 
-						<div class="md-form">
-							<label for="form1">
-								Which of the following is a character?<br>
-								[A],[b],[?], [ ], [!]
-							</label>
-							<textarea id="form1" class="md-textarea form-control" rows="3"></textarea>
+						Why do we say G’day? It’s usually more difficult than the traditional hello! If you give the
+						<a href="#">Python node</a> a go, you may notice why. Also, we’re paying homage to our ⅓
+						Australian roots.
+					</p><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-16 animate-box">
+					<p>
+						<div class="html-example">
+							<div class="code">
+								<span class="header">
+									<i class="fas fa-code"></i>
+									Code
+								</span>
+								<span class="code-container">
+									&lt;!DOCTYPE html&gt;<br>
+									&lt;html&gt;<br>
+									G’day Mate<br>
+									&lt;/html&gt;
+								</span>							
+							</div>
+							<div class="preview">
+								<span class="title">
+									<i class="fas fa-file"></i>
+									gday.html
+								</span>
+								<div class="content">
+									G'day Mate
+								</div>
+							</div>
 						</div>
 						<br><br>
-						
-						<b>A variable</b><br>    
-						A variable is basically a label. It’s a value that can change. You can define variables e.g. 
-						<code>My Favourite Colour = Yellow</code>, or you can calculate them e.g. <code>My Age = 
-						Current Year - Year of Birth</code>. 
-						<br><br>
-						<b>Let’s get back to saying G’day.</b>
-						<br>
-						Now pick a language of your choice. Using a Latin Alphabet print the string that translates
-						‘Hello’ in that language. 
-						<br><br>
-						<u>Examples:</u>
-						<pre>
-print(‘Bonjour’)
-print(‘Aloha’)
-print(‘Hola’)
-print(‘Ciao’)
-print(‘Halo’)
-print(‘Yassou’) 
-</pre>
-						<br><br>
-						Now, let’s say G’day. Try to run the following command:
-						<br>
-						<code>print(‘G’day, Mate!’)</code>
-						<br>
-						What happened when you tried to run this command? Why won’t our program say G’day? 
-						<br><br>
-						Python is confused. What character do you think threw our program off?
-						<br>
-						That’s right – it’s the ‘. The program interprets this as the end of the quote. So, you’ve told
-						the computer print ‘G’, then you’ve typed some random letters day, Mate! And then your second
-						apostrophe signals the start of a new string. 
-						<br><br>
-						So how do we tell the program that you want to use an apostrophe as part of the string and not a
-						symbol to stop? 
-						<br><br>
-						You do what we call ‘escaping’ the character. You do this by placing a \ in front of the character.
-						This tells Python: hey can you interpret this literally as an apostrophe please?
-						<br><br>
-						So let’s try again.
-						<br>
-						<code>print(‘G\’day, Mate!’)</code>
-						<br><br>
-						<b>New Line</b><br>
-						I’m pretty talkative and I usually have a lot to say. Let’s figure out how to print more than one
-						line of code. <br> 
-						The signal for a new line is as follows: 
-						<br>
-						<code>\n</code> 
-						<br><br>
-						So how do you think we would say:<br>
-						<pre>
-G’day Mate!
-How’s it going?
-						</pre>
-						<br>
-						<code>print(‘G\’day, Mate!\nHow\’s it going?’)</code>
-						<br><br>
-						Awesome, now you can say hello in English, Aussie Slang, _____ and Python! 
-						<br>
-						Now that we’ve learnt about strings, let’s look at the things we can do with them in python. 
-					</p><br>
 
+						There you have it! That’s your first ever webpage. Doesn’t it feel great? Perhaps not. We’ll work on it.<br>
+						First, let’s understand what each line does.
+						<br><br>
+
+						<table>
+							<tr style="font-weight: bold">
+								<td>Line</td>
+								<td>Explanation</td>
+							</tr>
+							<tr>
+								<td><code>&lt;!DOCTYPE html&gt;</code></td>
+								<td>
+									This is the first thing that every HTML document should start with. It tells your web browser
+									what version of html you are writing in. If this line is present it tells the browser to use
+									HTML5.
+								</td>
+							</tr>
+							<tr>
+								<td><code>&lt;html&gt;</code></td>
+								<td>
+									This is your first tag. It acts as a container for all the other HTML elements in your script.
+									It basically says, let’s start programming in HTML now. 
+								</td>
+							</tr>
+							<tr>
+								<td><code>G’day Mate</code></td>
+								<td>
+									This is the text that you are displaying on the page. 
+								</td>
+							</tr>
+							<tr>
+								<td><code>&lt;/html&gt;</code></td>
+								<td>
+									The / before a tag is indicative of the end of a tag. It basically says, let’s stop
+									programming in HTML now. 
+								</td>
+							</tr>
+						</table>
+					</p>
+					
 					<p><a class="btn btn-primary btn-lg btn-demo" href="string_ops.html">Next: String Operations</a>
-
 				</div>
 			</div>
 		</div>

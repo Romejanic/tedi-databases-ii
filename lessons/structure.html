@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HTML Crash Course &mdash; TEDI London</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">	 -->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="../css/flexslider.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+
+	<!-- HTML Example -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/html-example.css" />
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="../index.html">TEDI<span>.</span></a></div>
+						</div>
+						<div class="col-xs-10 text-right menu-1">
+							<ul>
+								<li><a href="../index.html">Home</a></li>
+								<li><a href="../set_up.html">Setup</a></li>
+								<li class="active has-dropdown"><a href="index.html">Lessons</a>
+									<ul class="dropdown">
+										<li><a href="gday.html">Let's say G'day</a></li>
+										<li><a href="structure.html">Adding structure</a></li>
+										<li><a href="images.html">Images</a></li>
+										<li><a href="connections.html">Making connections</a></li>
+									</ul>
+								</li>
+								<li class="btn-cta"><a href="../assessment.html"><span>Assessment</span></a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="fh5co-wireframe">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Let's add some structure</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5 animate-box">
+					<div class="user-frame">
+						<img src="../images/examples/tabs.jpg" alt="kill it" width="300">
+					</div>
+				</div>
+				<div class="col-md-7 animate-box">
+					<p>
+						Have you ever opened 10+ tabs at a time on your web browser? How did you navigate to the correct site
+						if you couldn’t see it?
+						<br><br>
+						The trick is we can read a snippet of the websites title. This title is a part of what is called
+						‘metadata’. Metadata isn’t actually displayed in our HTML, however metadata serves a purpose to your
+						site. 
+						<br><br>
+						This includes the title of the webpage, information about it’s style, links to other scripts etc. 
+						Metadata is contained with a <code>&lt;head&gt;</code> tag. The rest of your website is contained within
+						a <code>&lt;body&gt;</code> tag. Consider the following example: 
+					</p><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-16 animate-box">
+					<p>
+						<div class="html-example">
+							<div class="code">
+								<span class="header">
+									<i class="fas fa-code"></i>
+									Code
+								</span>
+								<span class="code-container">
+									&lt;!DOCTYPE html&gt;<br>
+									&lt;html&gt;<br>
+									&lt;head&gt;<br>
+										&lt;title&gt; My Website &lt;/title&gt;<br>
+									&lt;/head&gt;<br>
+									&lt;body&gt; <br>
+										&lt;h1&gt; This is heading 1. &lt;/h1&gt;<br>
+										&lt;h2&gt; This is heading 2. &lt;/h2&gt;<br>
+										This is &lt;b&gt; bold &lt;/b&gt;&lt;br&gt; <br>
+										This is &lt;u&gt; underlined &lt;/u&gt;<br>
+										&lt;b&gt;&lt;u&gt;&lt;i&gt;&lt;br&gt; This is bold, underlined and in italics &lt;/b&gt;&lt;/u&gt;&lt;/i&gt;<br>
+									&lt;/body&gt; <br>
+									&lt;/html&gt;
+								</span>							
+							</div>
+							<div class="preview">
+								<span class="title">
+									<i class="fas fa-file"></i>
+									My Website
+								</span>
+								<div class="content">
+									<h1>This is Heading 1.</h1>
+									<h2>This is Heading 2.</h2>
+									This is <b>bold</b><br>
+									This is <u>underlined</u><br>
+									<b><u><i>This is bold, underlined and in italics</i></u></b> 
+								</div>
+							</div>
+						</div>
+						<br><br>
+						<div class="md-form">
+							<label for="form1">
+								Your code pen output is identical. Why? 
+							</label>
+							<textarea id="form1" class="md-textarea form-control" rows="3"></textarea>
+						</div>
+
+						<span id="tbr-hidden-1">
+							<br>
+							<h3>Solution</h3>
+							We only added metadata, which isn’t displayed in our HTML.
+							<br><br>
+							<h3>Activity</h3>
+							Meet some new and ask ‘Hey can I make a website about you?’. Find a TEDI London Student and write
+							a basic website about them. Allow them to rest assured that you will not be publishing this website
+							so their data is safe. Save this page as <code>hello.html</code>.
+							<br><br>
+							Format the website as follows (assuming your new friend’s name is Paulo):
+							<br>
+							<div class="eg-preview">
+								<h1>Paulo's Website</h1>
+								<h2>Paulo is a student at TEDI London.</h2>
+								They are <b>19 years old</b>.<br>
+								They are from <u>Phoenix, Arizona</u><br>
+								Their favourite thing about London is the <b><u><i>the Borough Markets</i></u></b>.
+							</div>
+
+						</span>
+					</p>
+					
+					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-count="3" tbr-text="Next: Adding structure" tbr-href="structure.html">See Solution</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="../js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="../js/jquery.flexslider-min.js"></script>
+	<!-- Main -->
+	<script src="../js/main.js"></script>
+	<!-- Reveal -->
+	<script src="../js/reveal.js"></script>
+
+	</body>
+</html>

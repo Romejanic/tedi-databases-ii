@@ -11,6 +11,11 @@
 td {
   padding-right: 25px !important;
 }
+.eg-preview {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+}
 /* =======================================================
 *
 * 	Template Style 

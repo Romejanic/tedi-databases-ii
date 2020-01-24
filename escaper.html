@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TEST PAGE &mdash; TEDI London</title>
+	<title>HTML Escaper &mdash; TEDI London</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -59,6 +59,12 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+		#copy {
+			cursor: pointer;
+		}
+	</style>
+
 	</head>
 	<body>
 		
@@ -111,31 +117,25 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Pattern Recognition</h2>
+					<h2>HTML Escaper Tool</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-16 animate-box">
 					<p>
-						<b>Code Block</b><br>
-						<pre>
-a = 5
-b = 10
-print(a + b)
-						</pre>
-						<br><br>
-						<div class="md-form code-box">
-							<b>Code Box Example</b>
-							<iframe src="https://glot.io/snippets/fjv1rqn721"></iframe>
+						<div class="md-form">
+							<label for="input">
+								Enter the HTML code to escape
+							</label>
+							<textarea id="input" class="md-textarea form-control" rows="3"></textarea>
 						</div>
-
-						<div class="html-example">
-							<pre>
-								<! DOCTYPE html>
-								<html>
-								G’day Mate
-								</html>								
-							</pre>
+						<br><br>
+						<div class="md-form">
+							<label for="output">
+								Escaped Code
+							</label>
+							<textarea id="output" disabled class="md-textarea form-control" rows="3"></textarea>
+							<span id="copy">Click here to copy to clipboard</span> <span id="copy-notif"></span>
 						</div>
 					</p>
 				</div>
@@ -143,6 +143,32 @@ print(a + b)
 		</div>
 	</div>
 
+	<script>
+		let inputBox = document.getElementById("input");
+		let outputBox = document.getElementById("output");
+		inputBox.onkeyup = () => {
+			let value = inputBox.value;
+			//-----------------------
+			let lt = /</g;
+			let gt = />/g;
+			let am = /&/g;
+			let esc = value.replace(lt, "&lt;").replace(gt, "&gt;").replace(am, "&amp;");
+			//-----------------------
+			outputBox.innerHTML = esc;
+		};
+		document.getElementById("copy").onclick = () => {
+			navigator.clipboard.writeText(outputBox.innerHTML).then(() => {
+				$("#copy-notif").show().text("- Copied!");
+			}, (err) => {
+				$("#copy-notif").show().text("- Failed! (see console)");
+				console.error(err);
+			});
+			//------------------------
+			setTimeout(() => {
+				$("#copy-notif").fadeOut();
+			}, 1000);
+		};
+	</script>
 
 	</div>
 

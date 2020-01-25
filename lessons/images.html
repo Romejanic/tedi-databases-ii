@@ -134,7 +134,7 @@
 									&lt;!DOCTYPE html&gt;<br>
 									&lt;html&gt;<br>
 									&lt;head&gt;<br>
-										&lt;title&gt;Animals&lt;/title&gt; <br>
+										&lt;title&gt;The most underrated animal of all time.&lt;/title&gt; <br>
 									&lt;/head&gt;<br>
 									&lt;body&gt;<br>
 										I present &lt;b&gt;AXON&lt;/b&gt;&lt;/u&gt; the &lt;b&gt;&lt;u&gt;THE AXOLOTL&lt;/b&gt;&lt;/u&gt;&lt;br&gt;<br>
@@ -146,62 +146,74 @@
 							<div class="preview">
 								<span class="title">
 									<i class="fas fa-file"></i>
-									Animals
+									The most underrated animal of all time.
 								</span>
 								<div class="content">
 									I present <b>AXON</b> the <b><u>AXOLOTL</u></b>
 									<br>
-									<img src="http://bit.ly/axonTEDI" width="200" height="200" />
+									<img src="http://bit.ly/axonTEDI" width="200px" height="200px" />
 								</div>
 							</div>
 						</div>
 						<br><br>
 						Let’s go through each new feature:
-						
+						<br>
+						<table>
+							<tr style="font-weight: bold">
+								<td>Element</td>
+								<td>Explanation</td>
+							</tr>
+							<tr>
+								<td><code>&lt;img&gt;</code></td>
+								<td>
+									Defines an image. Does <u>not</u> have a closing tag.
+								</td>
+							</tr>
+							<tr>
+								<td><code>src</code></td>
+								<td>
+									Src is an attribute that specifies the URL (web address) of the image. This can also be
+									a local address like ‘image.png’ 
+								</td>
+							</tr>
+							<tr>
+								<td><code>"http://bit.ly/axonTEDI"</code></td>
+								<td>
+									This is the URL of the image. If you <a href="http://bit.ly/axonTEDI" target="_blank">enter
+									it in your browser's address bar</a>, the image will show up. 
+								</td>
+							</tr>
+							<tr>
+								<td><code>width</code></td>
+								<td>
+									This defines the width of your image. This value can be entered as a % of the width of the
+									page or as a number of pixels. 
+								</td>
+							</tr>
+							<tr>
+								<td><code>height</code></td>
+								<td>
+									This defines the height of your image. This value can be entered as a % of the height of the
+									page or as a number of pixels. 
+								</td>
+							</tr>
+							<tr>
+								<td><code>200px</code></td>
+								<td>
+									This sets the size to be 200 pixels.
+								</td>
+							</tr>
+						</table>
+						<br><br>
 
-						<span id="tbr-hidden-1">
-							<br>
-							<h3>Solution</h3>
-							We only added metadata, which isn’t displayed in our HTML.
-							<br><br>
-							<h3>Activity</h3>
-							Meet some new and ask ‘Hey can I make a website about you?’. Find a TEDI London Student and write
-							a basic website about them. Allow them to rest assured that you will not be publishing this website
-							so their data is safe. Save this page as <code>hello.html</code>.
-							<br><br>
-							Format the website as follows (assuming your new friend’s name is Paulo):
-							<br>
-							<div class="eg-preview">
-								<h1>Paulo's Website</h1>
-								<h2>Paulo is a student at TEDI London.</h2>
-								They are <b>19 years old.</b><br>
-								They are from <u>Phoenix, Arizona.</u><br>
-								Their favourite thing about London is the <b><u><i>the Borough Markets</i></u></b>.
-							</div>
-						</span>
+						<h3>Activity</h3>
+						Ask Paulo (or the friend of your choice) what their favourite animal is. Re-build the above utilising
+						this animal. Save this file as <code>animal.html</code> 
 
-						<span id="tbr-hidden-2">
-							<br>
-							<h3>Solution</h3>
-							<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt; Paulo's Website &lt;/title&gt; 
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt; Paulo's Website &lt;/h1&gt;
-		&lt;h2&gt; Paulo is a student at TEDI London. &lt;/h2&gt;
-		They are &lt;b&gt; 19 years old. &lt;/b&gt;&lt;br&gt; 
-		They are from &lt;u&gt; Phoenix, Arizona.&lt;/u&gt;&lt;br&gt;
-		Their favourite thing about London are&lt;b&gt;&lt;u&gt;&lt;i&gt;the Borough Markets &lt;/b&gt;&lt;/u&gt;&lt;/i&gt;.
-	&lt;/body&gt; 
-&lt;/html&gt;
-							</pre>
-						</span>
+						<br><br>
 					</p>
 					
-					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-count="2" tbr-text="Next: Images" tbr-href="images.html">See Solution</a>
+					<p><a class="btn btn-primary btn-lg btn-demo" href="connections.html">Next: Making connections</a>
 				</div>
 			</div>
 		</div>
@@ -226,8 +238,6 @@
 	<script src="../js/jquery.flexslider-min.js"></script>
 	<!-- Main -->
 	<script src="../js/main.js"></script>
-	<!-- Reveal -->
-	<script src="../js/reveal.js"></script>
 
 	</body>
 </html>

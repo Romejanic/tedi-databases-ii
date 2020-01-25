@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Python Crash Course &mdash; TEDI London</title>
+	<title>HTML Crash Course &mdash; TEDI London</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -84,55 +84,50 @@
 			<div class="container">
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Python Final Assessment</h2>
+						<h2>HTML Final Assessment</h2>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-16 animate-box">
 						<p>
-							<b><h3>Questions</h3></b>
-							<div class="md-form">
-								<label for="form1">
-									<b>1)</b> Meet Jameela. Jameela was a full time student in her first year of university,
-									who didn’t have enough money to buy her friends birthday presents. Determined to do
-									something to make their days special, she used computer programming to solve her problem!
-									In Jameela’s first year of university she learnt how to replace strings in a given text.
-									For example,<br>
-									<!-- unfortunately, code blocks require there to be no indentation in the HTML -->
-									<pre>
-str = “Once upon a time, in a land far away, lived a princess named Leia”
-print(str.replace("Leia", "Jameela"))
-									
-Output: “Once upon a time, in a land far away, lived a princess named Jameela”. 
-									</pre>
-									<br>
-									Using this knowledge, Jameela wrote a function,  that took in a text file (as input) of her
-									friends favourite books. This function then used string operations to replace all of the
-									instances of the main characters names, to a variable that stored her friends names! This
-									function outputted a new string, that was essentially a customised book for each of her
-									friends for their birthdays! It was incredibly thoughtful, and most importantly free! 
-									<br><br>
-									Try to think of a task in your life that could be improved using the skills you learnt in
-									this node. It doesn’t need to be complicated!
-								</label>
-								<textarea id="form1" class="md-textarea form-control" rows="3"></textarea>
-							</div>
-							<br>
+							<b><h3>Video Activity</h3></b>
+							Select one activity from this node. Choose a TEDI London student or staff member who has not
+							completed this node (or one that may be having problems with it). Film a video of you explaining
+							the code to them line by line. Allow them to ask questions at any point and include your answers
+							to these questions too.
+
+							<br><br>
+
+							<b><h3>Revision</h3></b>
 							<div class="md-form">
 								<label for="form2">
-									<b>2)</b> Fill in the following – the end product is now a study guide/summary/cheat sheet
-									for you! 
+									Describe the function of each tag. This will act a summary for your lesson! 
 								</label>
 								<table style="border: 1px solid lightgray; width: 100%">
 									<tr style="font-weight: bold">
-										<td>Syntax</td>
+										<td style="width: 200px">Syntax</td>
 										<td>Meaning</td>
 									</tr>
 									<script>
-										for(let i = 0; i < 7; i++) {
-											// i apologize in advance for this terrible, terrible hack
+										let tags = [
+											"<!DOCTYPE html>",
+											"<html>",
+											"<h1>",
+											"<b>",
+											"<u>",
+											"<s>",
+											"<i>",
+											"<a href>",
+											"<img>",
+											"src",
+											"<head>",
+											"<title>",
+											"<body>"
+										];
+										for(let tag of tags) {
+											tag = tag.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 											let style = "style='border: 1px solid lightgray'";
-											document.write(`<tr><td ${style} contenteditable="true">​</td><td ${style} contenteditable="true">​</td></tr>`);
+											document.write(`<tr style='height: 100px'><td ${style}>​${tag}</td><td ${style} contenteditable="true">​</td></tr>`);
 										}
 									</script>
 								</table>

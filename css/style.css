@@ -16,6 +16,9 @@ td {
   border-radius: 5px;
   padding: 10px;
 }
+.eg-preview a {
+  color: blue;
+}
 /* =======================================================
 *
 * 	Template Style 

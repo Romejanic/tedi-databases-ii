@@ -44,3 +44,6 @@
     font-family: monospace;
     padding: 5px;
 }
+.html-example .preview div.content a {
+    color: blue;
+}

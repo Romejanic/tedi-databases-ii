@@ -1,1 +1,1 @@
-# tedi-html-cc
+# tedi-css-cc

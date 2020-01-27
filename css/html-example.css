@@ -38,6 +38,7 @@
 }
 .html-example .preview div.content {
     background: white;
+    color: black;
     height: 100%;
     flex: 1 1 auto;
     border-radius: 0px 0px 10px;

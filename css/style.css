@@ -19,6 +19,12 @@ td {
 .eg-preview a {
   color: blue;
 }
+span#tbr-hidden-* {
+  display: inline;
+}
+.md-form {
+  width: 100%;
+}
 /* =======================================================
 *
 * 	Template Style 

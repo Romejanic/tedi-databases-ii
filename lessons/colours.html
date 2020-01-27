@@ -1,0 +1,391 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CSS Crash Course &mdash; TEDI London</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">	 -->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="../css/flexslider.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+
+	<!-- HTML Example -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/html-example.css" />
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="../index.html">TEDI<span>.</span></a></div>
+						</div>
+						<div class="col-xs-10 text-right menu-1">
+							<ul>
+								<li><a href="../index.html">Home</a></li>
+								<!--<li><a href="../set_up.html">Setup</a></li>-->
+								<li class="active has-dropdown"><a href="index.html">Lessons</a>
+									<ul class="dropdown">
+										<li><a href="understanding.html">Understanding CSS</a></li>
+										<li><a href="headings.html">Styling headings</a></li>
+										<li><a href="colours.html">Getting colourful</a></li>
+										<li><a href="divs.html">Introducing &lt;div&gt;s</a></li>
+									</ul>
+								</li>
+								<li class="btn-cta"><a href="../assessment.html"><span>Assessment</span></a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="fh5co-wireframe">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Getting colourful</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5 animate-box">
+					<div class="user-frame">
+						<img src="../images/examples/colours.jpg" alt="if you cant see this your eyes aren't blessed" width="300">
+						<h4>Our page will aspire to be this dog</h4>
+					</div>
+				</div>
+				<div class="col-md-7 animate-box">
+					<p>
+						The following tools are very rarely ‘taught’ in a higher education setting (particularly within
+						engineering degrees). However, they’re crucial in understanding how to develop visually appealing
+						and aesthetic websites (as well as presentations, and other visual communication tools in general).
+						<br><br>
+						<h3>Finding the perfect shade</h3>
+						If you ask me, the two colours we selected in the previous example aren’t the most visually appealing.
+						What if I want my shade of blue to be slightly lighter? Slightly darker? A little more green in there? 
+						<br><br>
+						An easy way is to refer to the following website:<br>
+						<a href="https://www.w3schools.com/cssref/css_colors.asp" target="_blank">https://www.w3schools.com/cssref/css_colors.asp</a><br>
+						As the website states, it highlights all of the colour names that are supported when coding in CSS.
+					</p><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-16 animate-box">
+					<p>
+						<h3>Activity</h3>
+						Modify your style.css document (or your style tab if you’re using code pen) with two different shades of
+						blue and green from the website listed.
+						<br><br>
+						<div class="md-form">
+							<label for="input">
+								What shades did you choose?
+							</label>
+							<textarea id="input" class="md-textarea form-control" rows="3"></textarea>
+						</div>
+					</p>
+				</div>
+			</div>
+			<div class="row" id="tbr-hidden-1">
+				<div class="col-md-16 animate-box">
+					<p>
+						<br>
+							<h3><i>A possible solution</i></h3>
+							There is no 'correct' solution, you can pick whichever shades of these colours you like!
+							<div class="html-example">
+								<div class="code">
+									<span class="header">
+										<i class="fas fa-code"></i>
+										Code - style.css
+									</span>
+									<span class="code-container">
+										h1 {<br>
+											color: lightskyblue;<br>
+										}<br>
+										h2 {<br>
+											color: springgreen;<br>
+										}   
+									</span>							
+								</div>
+								<div class="preview">
+									<span class="title">
+										<i class="fas fa-file"></i>
+										index.html
+									</span>
+									<div class="content">
+										<style>
+										h1._0002 {
+											color: lightskyblue;
+										}
+										h2._0002 {
+											color: springgreen;
+										}
+										</style>
+										<h1 class="_0002">Heading One</h1>
+										<h2 class="_0002">Heading Two</h2>
+									</div>
+								</div>
+							</div>
+							<br><br>
+							<h3>The sky’s the limit</h3> 
+							Actually, 16,777,216’s the limit. You can use many more colours than those in that list. In order to
+							do so, you simply need to specify either an RGB value or a HEX value (of which there are 16,777,216
+							options). 
+							<br><br>
+							How do you determine the HEX or RGB value of a colour? For our purposes, using a simple tool on the
+							internet will suffice. 
+							<br><br>
+							If you google search, <a href="https://google.com/search?q=colour+picker" target="_blank">‘Colour
+							Picker’</a> the following tool should appear:
+							<br>
+							<img src="../images/examples/picker.png" width="500" />
+							<br>
+							By scrolling through the colours, and moving the placement of your marker to determine brightness,
+							you should be able to exactly specify the colour you would like, and obtain the relevant RGB or HEX
+							code. These codes can be used instead of the names we’ve been using so far. 
+							<br><br>
+							For example: 
+							The HEX Code for LightSkyBlue is <code>#87CEFA</code>. You can double check this using the colour
+							picker tool. Type <code>#87CEFA</code> in the hex field and the colour will change. The RGB values
+							for SpringGreen are <code>0, 255, 127</code>.
+							<br><br>
+							If we replace our previous words with these new HEX and RGB values, we will see no change in the
+							output. 
+							<br>
+							<div class="html-example">
+								<div class="code">
+									<span class="header">
+										<i class="fas fa-code"></i>
+										Code - style.css
+									</span>
+									<span class="code-container">
+										h1 {<br>
+											color: #87CEFA;<br>
+										}<br>
+										h2 {<br>
+											color: rgb(0, 255, 127);<br>
+										}   
+									</span>							
+								</div>
+								<div class="preview">
+									<span class="title">
+										<i class="fas fa-file"></i>
+										index.html
+									</span>
+									<div class="content">
+										<style>
+										h1._0003 {
+											color: #87CEFA;
+										}
+										h2._0003 {
+											color: rgb(0, 255, 127);
+										}
+										</style>
+										<h1 class="_0003">Heading One</h1>
+										<h2 class="_0003">Heading Two</h2>
+									</div>
+								</div>
+							</div>
+							<br><br>
+							<h3>Activity</h3>
+							<div class="md-form">
+								<label for="input1">
+									Change the colour of H1 to SlateBlue and H2 to PaleGreen using ONLY HEX values. 
+								</label>
+								<textarea id="input1" class="md-textarea form-control" rows="3"></textarea>
+								<b>HINT:</b> use the CSS Colour Webpage linked previously + the colour picker tool to determine
+								these values. 
+							</div>
+					</p><br>
+				</div>
+			</div>
+			<div class="row" id="tbr-hidden-2">
+				<div class="col-md-16 animate-box">
+					<br>
+						<h3>Solution</h3>
+						<div class="html-example">
+							<div class="code">
+								<span class="header">
+									<i class="fas fa-code"></i>
+									Code - style.css
+								</span>
+							<span class="code-container">
+								h1 {<br>
+									color: #6A5ACD;<br>
+								}<br>
+								h2 {<br>
+									color: #98FB98;<br>
+								}   
+								</span>							
+							</div>
+							<div class="preview">
+								<span class="title">
+									<i class="fas fa-file"></i>
+									index.html
+									</span>
+									<div class="content">
+										<style>
+										h1._0004 {
+											color: #6A5ACD;
+										}
+										h2._0004 {
+											color: #98FB98;
+										}
+										</style>
+										<h1 class="_0004">Heading One</h1>
+										<h2 class="_0004">Heading Two</h2>
+									</div>
+								</div>
+						</div>
+						<br><br>
+						<div class="md-form">
+							<label for="input2">
+								What is the HEX value for SlateBlue?
+							</label>
+							<textarea id="input2" class="md-textarea form-control" rows="3"></textarea>
+						</div>
+						<div id="tbr-hidden-3">
+							<br>
+							<h3>Solution</h3>
+							<code>#6A5ACD</code>
+							<br><br>
+							<div class="md-form">
+								<label for="input3">
+									What is the HEX value for PaleGreen?
+								</label>
+								<textarea id="input3" class="md-textarea form-control" rows="3"></textarea>
+							</div>
+							<div id="tbr-hidden-4">
+								<br>
+								<h3>Solution</h3>
+								<code>#98FB98</code>
+								<br><br>
+								<div class="md-form">
+									<label for="input4">
+										What is the RGB value for SlateBlue?
+									</label>
+									<textarea id="input4" class="md-textarea form-control" rows="3"></textarea>
+								</div>
+								<div id="tbr-hidden-5">
+									<br>
+									<h3>Solution</h3>
+									<code>rgb(106, 90, 205)</code>
+									<br><br>
+									<div class="md-form">
+										<label for="input5">
+											What is the RGB value for PaleGreen?
+										</label>
+										<textarea id="input5" class="md-textarea form-control" rows="3"></textarea>
+									</div>
+									<div id="tbr-hidden-6">
+										<br>
+										<h3>Solution</h3>
+										<code>rgb(152, 251, 152)</code>
+										<br><br>
+										<h3>Copy-Cat</h3> 
+										What if you’re scrolling through the internet, and you happen to see a particular shade
+										that you REALLY like? Or maybe, you work for a company with really strict
+										branding-guidelines and you need to use their specific shade of yellow? There are tonnes
+										of scenarios where know the exact HEX code of a colour you see is useful. 
+										<br><br>
+										There are several software options available that can help you with this. For example:
+										Mac systems include a program called Digital Colour Meter.
+										<br><br>
+										When you open digital colour meter, you can hover over any colour on your computer screen
+										and it will tell you the exact RGB values. 
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-7 animate-box">
+					<br>
+					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-count="6" tbr-text="Next: Introducing &lt;div&gt;s" tbr-href="divs.html">See Solution</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="../js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="../js/jquery.flexslider-min.js"></script>
+	<!-- Main -->
+	<script src="../js/main.js"></script>
+	<!-- Reveal -->
+	<script src="../js/reveal.js"></script>
+
+	</body>
+</html>

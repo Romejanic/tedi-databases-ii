@@ -112,109 +112,64 @@
 				</div>
 				<div class="col-md-7 animate-box">
 					<p>
-						Have you ever opened 10+ tabs at a time on your web browser? How did you navigate to the correct site
-						if you couldn’t see it?
-						<br><br>
-						The trick is we can read a snippet of the websites title. This title is a part of what is called
-						‘metadata’. Metadata isn’t actually displayed in our HTML, however metadata serves a purpose to your
-						site. 
-						<br><br>
-						This includes the title of the webpage, information about it’s style, links to other scripts etc. 
-						Metadata is contained with a <code>&lt;head&gt;</code> tag. The rest of your website is contained within
-						a <code>&lt;body&gt;</code> tag. Consider the following example: 
+						CSS describes how HTML elements should be displayed. The basic structure of CSS consists of a
+						selector followed by a declaration. That declaration is made up of a property and it’s value.
+						<br>
+						Consider the following: 
+						<pre>
+h1 {
+    color: yellow;
+}							
+						</pre>
+						<br>
+						Let’s explain what’s happening here.
 					</p><br>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-16 animate-box">
 					<p>
-						<div class="html-example">
-							<div class="code">
-								<span class="header">
-									<i class="fas fa-code"></i>
-									Code
-								</span>
-								<span class="code-container">
-									&lt;!DOCTYPE html&gt;<br>
-									&lt;html&gt;<br>
-									&lt;head&gt;<br>
-										&lt;title&gt; My Website &lt;/title&gt;<br>
-									&lt;/head&gt;<br>
-									&lt;body&gt; <br>
-										&lt;h1&gt; This is heading 1. &lt;/h1&gt;<br>
-										&lt;h2&gt; This is heading 2. &lt;/h2&gt;<br>
-										This is &lt;b&gt; bold &lt;/b&gt;&lt;br&gt; <br>
-										This is &lt;u&gt; underlined &lt;/u&gt;<br>
-										&lt;b&gt;&lt;u&gt;&lt;i&gt;&lt;br&gt; This is bold, underlined and in italics &lt;/b&gt;&lt;/u&gt;&lt;/i&gt;<br>
-									&lt;/body&gt; <br>
-									&lt;/html&gt;
-								</span>							
-							</div>
-							<div class="preview">
-								<span class="title">
-									<i class="fas fa-file"></i>
-									My Website
-								</span>
-								<div class="content">
-									<h1>This is Heading 1.</h1>
-									<h2>This is Heading 2.</h2>
-									This is <b>bold</b><br>
-									This is <u>underlined</u><br>
-									<b><u><i>This is bold, underlined and in italics</i></u></b> 
-								</div>
-							</div>
-						</div>
+						<table>
+							<tr style="font-weight: bold">
+								<td>Element</td>
+								<td>Explanation</td>
+							</tr>
+							<tr>
+								<td><code>h1</code></td>
+								<td>
+									The selector, tells CSS which element(s) to target (in this case,
+									<code>&lt;h1&gt;</code> tags).
+								</td>
+							</tr>
+							<tr>
+								<td><code>color: yellow;</code></td>
+								<td>
+									The declaration, what the CSS is actually doing.
+								</td>
+							</tr>
+							<tr>
+								<td><code>color</code></td>
+								<td>
+									The property of the declaration.
+								</td>
+							</tr>
+							<tr>
+								<td><code>yellow</code></td>
+								<td>
+									The value of the declaration.
+								</td>
+							</tr>
+						</table>
 						<br><br>
-						<div class="md-form">
-							<label for="form1">
-								Your code pen output is identical. Why? 
-							</label>
-							<textarea id="form1" class="md-textarea form-control" rows="3"></textarea>
-						</div>
-
-						<span id="tbr-hidden-1">
-							<br>
-							<h3>Solution</h3>
-							We only added metadata, which isn’t displayed in our HTML.
-							<br><br>
-							<h3>Activity</h3>
-							Meet some new and ask ‘Hey can I make a website about you?’. Find a TEDI London Student and write
-							a basic website about them. Allow them to rest assured that you will not be publishing this website
-							so their data is safe. Save this page as <code>hello.html</code>.
-							<br><br>
-							Format the website as follows (assuming your new friend’s name is Paulo):
-							<br>
-							<div class="eg-preview">
-								<h1>Paulo's Website</h1>
-								<h2>Paulo is a student at TEDI London.</h2>
-								They are <b>19 years old.</b><br>
-								They are from <u>Phoenix, Arizona.</u><br>
-								Their favourite thing about London is the <b><u><i>the Borough Markets</i></u></b>.
-							</div>
-						</span>
-
-						<span id="tbr-hidden-2">
-							<br>
-							<h3>Solution</h3>
-							<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt; Paulo's Website &lt;/title&gt; 
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt; Paulo's Website &lt;/h1&gt;
-		&lt;h2&gt; Paulo is a student at TEDI London. &lt;/h2&gt;
-		They are &lt;b&gt; 19 years old. &lt;/b&gt;&lt;br&gt; 
-		They are from &lt;u&gt; Phoenix, Arizona.&lt;/u&gt;&lt;br&gt;
-		Their favourite thing about London are&lt;b&gt;&lt;u&gt;&lt;i&gt;the Borough Markets &lt;/b&gt;&lt;/u&gt;&lt;/i&gt;.
-	&lt;/body&gt; 
-&lt;/html&gt;
-							</pre>
-						</span>
+						There is a huge range of CSS properties that can be modified.
+						<a href="https://www.quackit.com/css/properties/" target="_blank">See here</a> for a
+						comprehensive list.
+						<br><br>
+						In this crash course we will only explore a limited number of them, but feel free to explore those
+						listed in your free time or refer back to that website as required in your web en<u>DE</u>a<u>V</u>ours. 
 					</p>
 					
-					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-count="2" tbr-text="Next: Images" tbr-href="images.html">See Solution</a>
+					<p><a class="btn btn-primary btn-lg btn-demo" href="headings.html">Next: Styling headings</a>
 				</div>
 			</div>
 		</div>

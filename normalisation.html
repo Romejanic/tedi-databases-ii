@@ -101,494 +101,220 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Introducing &lt;div&gt;s</h2>
+					<h2>Database Lessons</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-7 animate-box">
 					<p>
-						Divs are a HTML tag. Recall the different tags we learnt in the HTML node. We’re introducing them here
-						in the CSS node as they are used heavily with CSS styling. You can think of DIV as a Division, or a
-						container. It essentially allows us to section off our work in specific ways. Let’s dive into an example
-						so this makes more sense.
+						<h2>Understand the significance of normalisation in databases</h2>
+						Normalisation: It’s a technique that you use while designing databases that determines how your data is
+						organised. If you follow the principles of normalisation, you will effectively reduce the redundancy and
+						dependency of your data. 
 						<br><br>
-						I want to divide the page into 3 different colours. A yellow block, a black block, and a pink block.
-						<br><br>
-						To do this, in CSS we’re going to create 3 separate classes, and apply these to 3 different divs.
-						Let’s take a look. 
+						<h2>Apply the principles of first normal form, second normal form and third normal form to design a
+						database.</h2>
 					</p>
 				</div>
 				<div class="col-md-5 animate-box">
 					<div class="user-frame">
-						<img src="images/examples/divs.jpg" alt="it's also painfully true" width="300">
+						<img src="images/examples/databases.png" alt="B I G D A T A" width="300">
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-16 animate-box">
 					<p>
+						<h3>First Normal Form (1NF)</h3>
+						To bring a database into first normal form you need to consider two rules:
 						<ol>
-							<li>
-								Define the yellow block class in css.<br>
-								So in your style.css sheet:
-								<pre>
-.yellowBlock {
-  background-color: yellow; 
-}
-								</pre>
-								<code>background-color</code> - as is self explanatory in the name, defines a colour for the
-								background of this class.<br>
-								<code>yellowBlock</code> is the name of the class. You set this. It is preceded by a full stop. 
-								<br><br>
-							</li>
-							<li>
-								Call upon this class in your HTML document.<br>
-								<div class="html-example">
-									<div class="code">
-										<span class="header">
-											<i class="fas fa-code"></i>
-											Code
-										</span>
-										<span class="code-container">
-											&lt;html&gt;<br>
-											&lt;head&gt;<br>
-												&lt;title&gt;Fun with divs!&lt;/title&gt;<br>
-												&lt;link rel="stylesheet" href="style.css" /&gt;<br>
-											&lt;/head&gt; <br>
-											&lt;body&gt;<br>
-												&lt;div class="yellowBlock"&gt;<br>
-													This block should be yellow <br>
-												&lt;/div&gt;<br>
-											&lt;/body&gt; <br>
-											&lt;/html&gt; 
-										</span>							
-									</div>
-									<div class="preview">
-										<span class="title">
-											<i class="fas fa-file"></i>
-											Fun with divs!
-										</span>
-										<div class="content">
-											<style>
-											div.yellowBlock_0001 {
-												background-color: yellow;
-											}
-											</style>
-											<div class="yellowBlock_0001">
-												This block should be yellow
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
+							<li>All values are atomic.</li> 
+							<li>There are no repeating groups.</li> 
 						</ol>
+						Ok, so what does point 1 actually mean? Recall the knowledge you gained in <a href="#">[NODE X]</a>
+						and <a href="#">[Node X]</a> on datatypes. What do you think an atomic datatype could be? A simple
+						definition was provided by Joe Celko.
 						<br><br>
-						Our div tag starts the division. It also sets the class to be yellowBlock, that we defined earlier. 
-						The /div tag ends the division, and therefore the yellow colour. 
-						Amazing that’s your first division complete!
+						<quote>
+						<i>“This means a column cannot have arrays, linked lists, tables within tables, or record structures like
+						those you find in other programming languages”<br>
+						- Celko, Joe. SQL for Smarties: Advanced SQL Programming (Third Edition). s.l. : Morgan Kaufmann,
+						2005. 978-0123693792.</i>
+						</quote>
 						<br><br>
-						Let's try again with a different division:
-						<ol>
-							<li>
-								Define a black block in CSS <br>
-								<pre>
-.blackBlock {
-  background-color: black; 
-}
-								</pre>
-								<br>
-							</li>
-							<li>
-								Call upon this class in your HTML document.<br>
-								<div class="html-example">
-									<div class="code">
-										<span class="header">
-											<i class="fas fa-code"></i>
-											Code
-										</span>
-										<span class="code-container">
-											&lt;html&gt;<br>
-											&lt;head&gt;<br>
-												&lt;title&gt;Fun with divs!&lt;/title&gt;<br>
-												&lt;link rel="stylesheet" href="style.css" /&gt;<br>
-											&lt;/head&gt; <br>
-											&lt;body&gt;<br>
-												&lt;div class="yellowBlock"&gt;<br>
-													This block should be yellow <br>
-												&lt;/div&gt;<br>
-												&lt;div class="blackBlock"&gt;<br>
-													This block should be black? <br>
-												&lt;/div&gt;<br>
-											&lt;/body&gt; <br>
-											&lt;/html&gt; 
-										</span>							
-									</div>
-									<div class="preview">
-										<span class="title">
-											<i class="fas fa-file"></i>
-											Fun with divs!
-										</span>
-										<div class="content">
-											<style>
-											div.yellowBlock_0002 {
-												background-color: yellow;
-											}
-											div.blackBlock_0002 {
-												background-color: black;
-											}
-											</style>
-											<div class="yellowBlock_0002">
-												This block should be yellow
-											</div>
-											<div class="blackBlock_0002">
-												This block should be black?
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ol>
-						<br><br>
-						Do you see any issues here? Perhaps the question should be is there anything that you don’t see?<br> 
-						The text is not visible. This is because the text colour is set to black by default. We can change this
-						in our CSS file too! You need to modify the ‘color’ property. Like so:
-						<br><br>
-						<div class="html-example">
-							<div class="code">
-								<span class="header">
-									<i class="fas fa-code"></i>
-									Code - style.css
-								</span>
-								<span class="code-container">
-									.yellowBlock {<br>
-										background-color: yellow;<br>
-									}<br>
-									.blackBlock {<br>
-										background-color: black;<br>
-										color: white;<br>
-									}
-								</span>							
-							</div>
-							<div class="preview">
-								<span class="title">
-									<i class="fas fa-file"></i>
-									Fun with divs!
-								</span>
-								<div class="content">
-									<style>
-									div.yellowBlock_0003 {
-										background-color: yellow;
-									}
-									div.blackBlock_0003 {
-										background-color: black;
-										color: white;
-									}
-									</style>
-									<div class="yellowBlock_0003">
-										This block should be yellow
-									</div>
-									<div class="blackBlock_0003">
-										This block should be black?
-									</div>
-								</div>
-							</div>
-						</div>
-						<br><br>
-						<h3>Activity</h3> 
-						Create a third pink box. Use white font. Include the following text “This box should be white”.<br>
-						Copy and paste your code for your html document and your css file. Also include a screenshot of your output.
-						<br><br>
-						<h3>Creating Custom Buttons</h3>
-						Change the text in each box to say the word Button 2, Button 2, and Button 3. Then add a break between
-						each box. 
-						<br><br>
-						<div class="html-example">
-							<div class="code">
-								<span class="header">
-									<i class="fas fa-code"></i>
-									Code
-								</span>
-								<span class="code-container">
-									&lt;html&gt;<br>
-									&lt;head&gt;<br>
-										&lt;title&gt;Custom buttons&lt;/title&gt;<br>
-										&lt;link rel="stylesheet" href="style.css /&gt;<br>
-									&lt;/head&gt;<br>
-									&lt;body&gt;<br>
-										&lt;div class="yellowBlock"&gt;<br>
-											Button 1<br>
-										&lt;/div&gt;<br>
-										&lt;br&gt; <br>
-										&lt;div class="blackBlock"&gt;<br>
-											Button 2 <br>
-										&lt;/div&gt;<br>
-										&lt;br&gt; <br>
-										&lt;div class="pinkBlock"&gt;<br>
-											Button 3<br>
-										&lt;/div&gt;<br>
-									&lt;/body&gt;  <br>
-									&lt;/html&gt;<br>
-								</span>							
-							</div>
-							<div class="preview">
-								<span class="title">
-									<i class="fas fa-file"></i>
-									Custom buttons
-								</span>
-								<div class="content">
-									<style>
-									div.yellowBlock_0004 {
-										background-color: yellow;
-									}
-									div.blackBlock_0004 {
-										background-color: black;
-										color: white;
-									}
-									div.pinkBlock_0004 {
-										background-color: pink;
-										color: white;
-									}
-									</style>
-									<div class="yellowBlock_0004">
-										Button 1
-									</div>
-									<br>
-									<div class="blackBlock_0004">
-										Button 2
-									</div>
-									<br>
-									<div class="pinkBlock_0004">
-										Button 3
-									</div>
-								</div>
-							</div>
-						</div>
-						<br><br>
-						Now let’s customise button one (to make it look more like a button). We’re going to make 4 key changes.
-						The first is to decrease the width of the div (so it doesn’t take up the whole page). The second is to
-						align the button to the center of the page. The third is to align the text into the centre of the button.
-						The fourth is to increase the space between the text and the edge of the button. 
-						<br><br>
-						The following is sample code:
-						<br><br>
-						<div class="html-example">
-							<div class="code">
-								<span class="header">
-									<i class="fas fa-code"></i>
-									Code - CSS
-								</span>
-								<span class="code-container">
-									.yellowBlock {<br>
-										background-color: yellow; <br>
-										width: 15%; <br>
-										margin: auto; <br>
-										text-align: center; <br>
-										padding: 2px;<br>
-									}<br>
-									...
-								</span>							
-							</div>
-							<div class="preview">
-								<span class="title">
-									<i class="fas fa-file"></i>
-									Custom buttons
-								</span>
-								<div class="content">
-									<style>
-									div.yellowBlock_0005 {
-										background-color: yellow;
-										width: 15%;
-										margin: auto;
-										text-align: center;
-										padding: 2px;
-									}
-									div.blackBlock_0005 {
-										background-color: black;
-										color: white;
-									}
-									div.pinkBlock_0005 {
-										background-color: pink;
-										color: white;
-									}
-									</style>
-									<div class="yellowBlock_0005">
-										Button 1
-									</div>
-									<br>
-									<div class="blackBlock_0005">
-										Button 2
-									</div>
-									<br>
-									<div class="pinkBlock_0005">
-										Button 3
-									</div>
-								</div>
-							</div>
-						</div>
-						<br><br>
-						By modifying the values assigned to each attribute, and removing certain attributes, match each attribute
-						with the steps listed above.
-						<br><br>
-						Now, we need to elevate our design. One way to do so is by adding different effects on your classes. We’re
-						going to round the corners and add a shadow. 
-						<br><br>
-						<div class="html-example">
-							<div class="code">
-								<span class="header">
-									<i class="fas fa-code"></i>
-									Code - CSS
-								</span>
-								<span class="code-container">
-									.yellowBlock {<br>
-										background-color: yellow; <br>
-										width: 15%; <br>
-										margin: auto; <br>
-										text-align: center; <br>
-										padding: 2px;<br>
-									}<br>
-									.blackBlock {<br>
-										background-color: black;  <br>
-										color: white; <br>
-										border-radius: 25px;<br>
-										width: 15%; <br>
-										margin:auto; <br>
-										text-align: center; <br>
-										padding: 2px; <br>
-										box-shadow: 3px 3px 9px black;<br>
-									}<br>
-									...
-								</span>							
-							</div>
-							<div class="preview">
-								<span class="title">
-									<i class="fas fa-file"></i>
-									Custom buttons
-								</span>
-								<div class="content">
-									<style>
-									div.yellowBlock_0006 {
-										background-color: yellow;
-										width: 15%;
-										margin: auto;
-										text-align: center;
-										padding: 2px;
-									}
-									div.blackBlock_0006 {
-										background-color: black;  
-										color: white; 
-										border-radius: 25px;
-										width: 15%; 
-										margin:auto; 
-										text-align: center; 
-										padding: 2px; 
-										box-shadow: 3px 3px 9px black;
-									}
-									div.pinkBlock_0006 {
-										background-color: pink;
-										color: white;
-									}
-									</style>
-									<div class="yellowBlock_0006">
-										Button 1
-									</div>
-									<br>
-									<div class="blackBlock_0006">
-										Button 2
-									</div>
-									<br>
-									<div class="pinkBlock_0006">
-										Button 3
-									</div>
-								</div>
-							</div>
-						</div>
-						<br><br>
-						To bring add more life to our website, let’s change what happens when we hover over our button. To change
-						a class when you hover over it, define class you want to change, followed by <code>:hover</code>. Consider
-						the example displayed below:
-						<br><br>
-						<div class="html-example">
-							<div class="code">
-								<span class="header">
-									<i class="fas fa-code"></i>
-									Code - CSS
-								</span>
-								<span class="code-container">
-									.pinkBox:hover {<br>
-										border-style: outset;<br>
-										border-width: 1px;<br>
-										box-shadow: 3px 3px 9px white; <br>
-									}<br>
-									...
-								</span>							
-							</div>
-							<div class="preview">
-								<span class="title">
-									<i class="fas fa-file"></i>
-									Custom buttons
-								</span>
-								<div class="content">
-									<style>
-									div.yellowBlock_0007 {
-										background-color: yellow;
-										width: 15%;
-										margin: auto;
-										text-align: center;
-										padding: 2px;
-									}
-									div.blackBlock_0007 {
-										background-color: black;  
-										color: white; 
-										border-radius: 25px;
-										width: 15%; 
-										margin:auto; 
-										text-align: center; 
-										padding: 2px; 
-										box-shadow: 3px 3px 9px black;
-									}
-									div.pinkBlock_0007 {
-										background-color: pink;  
-										color: white; 
-										border-radius: 25px;
-										width: 15%; 
-										margin:auto; 
-										text-align: center; 
-										padding: 2px; 
-										box-shadow: 3px 3px 9px black;
-									}
-									div.pinkBlock_0007:hover {
-										border-style: outset;
-										border-width: 1px;
-										box-shadow: 3px 3px 9px white; 
-									}
-									</style>
-									<div class="yellowBlock_0007">
-										Button 1
-									</div>
-									<br>
-									<div class="blackBlock_0007">
-										Button 2
-									</div>
-									<br>
-									<div class="pinkBlock_0007">
-										Button 3
-									</div>
-								</div>
-							</div>
-						</div>
-						<br><br>
-						<h3>Activity</h3>
-						Add a hover effect to the other two buttons.<br>
-						<u>For button 1</u>: Change the size of the button when you hover over it.<br>
-						<u>For button 2</u>: Change the text colour when you hover over it. 
-						<br><br>
-						<h3>Conclusion</h3>
-						The tools you’ve learnt to style your page, are not just limited in their application to buttons. You can
-						create any kind of element you want, and add elements of style to it now. 
+						<h3>Example One</h3>
+						Identifying non-atomic values.<br>
+						<table>
+							<tr style="font-weight: bold; text-decoration: underline;">
+								<td>Student First Name</td>
+								<td>Student Last Name</td>
+								<td>Student ID</td>
+								<td>Grades (%)</td>
+								<td>Courses</td>
+							</tr>
+							<tr>
+								<td>Vivian</td>
+								<td>Bakiris</td>
+								<td>1</td>
+								<td>75,82,84</td>
+								<td>Databases I, Computational Thinking, Machine Learning II</td>
+							</tr>
+							<tr>
+								<td>Laurence</td>
+								<td>Boss</td>
+								<td>2</td>
+								<td>84,87,77</td>
+								<td>Embedded Systems, Circuits I, Ethics II</td>
+							</tr>
+							<tr>
+								<td>Clare</td>
+								<td>Giang</td>
+								<td>3</td>
+								<td>85,91,88</td>
+								<td>Solid Mechanics I, History of Engineering, Transport II</td>
+							</tr>
+							<tr>
+								<td>Brian</td>
+								<td>Kozik</td>
+								<td>4</td>
+								<td>80,79,83</td>
+								<td>Business Analytics II, Sustainability I, Data Structures II</td>
+							</tr>
+						</table>
 						<br>
+						<div class="md-form">
+							<label for="input">
+								Which columns do you think fall under Joe Celko’s definition of non-atomic columns?
+							</label>
+							<textarea id="input" class="md-textarea form-control" rows="3"></textarea>
+						</div>
+
+						<div id="tbr-hidden">
+							<br>
+							<h3>Answer</h3>
+							Grades and Courses
+							<br><br>
+							<h3>Why is this an issue?</h3>
+							Let’s say we need to change Vivian’s grade in Computational thinking. We have to bump it up to an 83.
+							How would we do this? (Think of this from a computational perspective, knowledge of SQL is not
+							expected at this point).
+							<br><br>
+							We would need to access that grades column. Then we would need to access the array of grades that is
+							being stored. We would need to search that array, and locate the appropriate grade. Then change that
+							grade. 
+							<br><br>
+							Based off what you learnt in <a href="#">NODE X</a>, that would increase the computational complexity
+							of the program. Therefore, it’s best we avoid it. Additionally, it is important for other forms of
+							normalisation that we will encounter throughout this node. 
+							<br><br>
+							Let’s remove the non-atomic values. 
+							<br><br>
+							<table>
+								<tr style="font-weight: bold; text-decoration: underline;">
+									<td>Student First Name</td>
+									<td>Student Last Name</td>
+									<td>Student ID</td>
+									<td>Grades (%)</td>
+									<td>Courses</td>
+								</tr>
+								<tr>
+									<td>Vivian</td>
+									<td>Bakiris</td>
+									<td>1</td>
+									<td>75</td>
+									<td>Databases I</td>
+								</tr>
+								<tr>
+									<td>Vivian</td>
+									<td>Bakiris</td>
+									<td>1</td>
+									<td>82</td>
+									<td>Computational Thinking</td>
+								</tr>
+								<tr>
+									<td>Vivian</td>
+									<td>Bakiris</td>
+									<td>1</td>
+									<td>84</td>
+									<td>Machine Learning II</td>
+								</tr>
+								<tr>
+									<td>Laurence</td>
+									<td>Boss</td>
+									<td>2</td>
+									<td>84</td>
+									<td>Embedded Systems</td>
+								</tr>
+								<tr>
+									<td>Laurence</td>
+									<td>Boss</td>
+									<td>2</td>
+									<td>87</td>
+									<td>Circuits I</td>
+								</tr>
+								<tr>
+									<td>Laurence</td>
+									<td>Boss</td>
+									<td>2</td>
+									<td>77</td>
+									<td>Ethics II</td>
+								</tr>
+								<tr>
+									<td>Clare</td>
+									<td>Giang</td>
+									<td>3</td>
+									<td>85</td>
+									<td>Solid Mechanics I</td>
+								</tr>
+								<tr>
+									<td>Clare</td>
+									<td>Giang</td>
+									<td>3</td>
+									<td>91</td>
+									<td>History of Engineering</td>
+								</tr>
+								<tr>
+									<td>Clare</td>
+									<td>Giang</td>
+									<td>3</td>
+									<td>88</td>
+									<td>Transport II</td>
+								</tr>
+								<tr>
+									<td>Brian</td>
+									<td>Kozik</td>
+									<td>4</td>
+									<td>80</td>
+									<td>Business Analytics II</td>
+								</tr>
+								<tr>
+									<td>Brian</td>
+									<td>Kozik</td>
+									<td>4</td>
+									<td>79</td>
+									<td>Sustainability I</td>
+								</tr>
+								<tr>
+									<td>Brian</td>
+									<td>Kozik</td>
+									<td>4</td>
+									<td>83</td>
+									<td>Data Structures II</td>
+								</tr>
+							</table>
+							<br><br>
+							This is good. But now we have the issue of repeating groups. A repeating group, is a set of several
+							columns that repeat together always.<br>
+							For example, wherever the student ID is 1, the first name and last name will be Vivian and Bakiris
+							respectively. Everytime the student ID is 2, the first name will be Laurence and the last name will
+							be boss. So First Name, Last Name and Student ID have formed a repeating group. 
+							<br><br>
+							1NF splits repeating groups. It eliminates duplicate columns from the same table, creates separate
+							tables for each group of related data, and identifies each row with a unique column (primary key). 
+						</div>
 					</p>
 					
-					<p><a class="btn btn-primary btn-lg btn-demo" href="../index.html">You're all done! (woo)</a>
+					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-text="You're all done (woo)" tbr-href="index.html">See Answer</a>
 				</div>
 			</div>
 		</div>

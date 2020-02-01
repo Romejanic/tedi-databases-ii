@@ -189,7 +189,7 @@
 							<textarea id="input" class="md-textarea form-control" rows="3"></textarea>
 						</div>
 
-						<div id="tbr-hidden">
+						<div id="tbr-hidden-1">
 							<br>
 							<h3>Answer</h3>
 							Grades and Courses
@@ -310,11 +310,410 @@
 							be boss. So First Name, Last Name and Student ID have formed a repeating group. 
 							<br><br>
 							1NF splits repeating groups. It eliminates duplicate columns from the same table, creates separate
-							tables for each group of related data, and identifies each row with a unique column (primary key). 
+							tables for each group of related data, and identifies each row with a unique column (primary key).
+							<br><br>
+							<div class="md-form">
+								<label for="input1">
+									Which column do you think would be best to use as the primary column? Think of a column that
+									is unique (I.E. can’t be the same for ANY other student). 
+								</label>
+								<textarea id="input1" class="md-textarea form-control" rows="3"></textarea>
+								Hint: Can you have multiple students in Databases I? Can you have multiple students who obtained
+								a grade of 84? 
+							</div> 
+						</div>
+
+						<div id="tbr-hidden-2">
+							<br>
+							<h3>Answer</h3>
+							Student ID is the best column to use as a primary key.
+							<br>
+							Using the Student ID we can now separate this table into TWO tables. Let’s take a look at how. 
+							<br><br>
+							<i>Student Information</i><br>
+							<table>
+								<tr style="font-weight: bold; text-decoration: underline;">
+									<td>Student ID</td>
+									<td>Student First Name</td>
+									<td>Student Last Name</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Vivian</td>
+									<td>Bakiris</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Laurence</td>
+									<td>Boss</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Clare</td>
+									<td>Giang</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Brian</td>
+									<td>Kozik</td>
+								</tr>
+							</table><br>
+							<i>Student Grades</i><br>
+							<table>
+								<tr style="font-weight: bold; text-decoration: underline;">
+									<td>Student ID</td>
+									<td>Grade (%)</td>
+									<td>Course</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>75</td>
+									<td>Databases I</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>82</td>
+									<td>Computational Thinking</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>84</td>
+									<td>Machine Learning II</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>84</td>
+									<td>Embedded Systems</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>87</td>
+									<td>Circuits I</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>77</td>
+									<td>Ethics II</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>85</td>
+									<td>Solid Mechanics I</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>91</td>
+									<td>History of Engineering</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>88</td>
+									<td>Transport II</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>80</td>
+									<td>Business Analytics II</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>79</td>
+									<td>Sustainability I</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>83</td>
+									<td>Data Structures II</td>
+								</tr>
+							</table>
+							<br><br>
+							<h3>Activity</h3>
+							<div class="md-form">
+								<label for="input2">
+									How would we get the first name of the person who scored 85% in Solid Mechanics I?
+								</label>
+								<textarea id="input2" class="md-textarea form-control" rows="3"></textarea>
+							</div>
+						</div>
+
+						<div id="tbr-hidden-3">
+							<br>
+							<h3>Answer</h3>
+							You would look at the Student ID in the row (3), then go to the Student Information Table with the 
+							corresponding Student ID, and look up the first name in the row (in this case, Clare).
+							<br><br>
+							Let’s consider the following example:
+							<br>
+							<table>
+								<tr style="font-weight: bold; text-decoration: underline;">
+									<td>CustomerID</td>
+									<td>DateOfPurchase</td>
+									<td>ItemPurchased</td>
+									<td>PaymentMethod</td>
+									<td>FirstName</td>
+									<td>LastName</td>
+									<td>Street</td>
+									<td>Suburb</td>
+									<td>Unit/Street Number</td>
+									<td>Postcode</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>1/1/19</td>
+									<td>Sweater</td>
+									<td>Card</td>
+									<td>Judy</td>
+									<td>Raper</td>
+									<td>Rainbow</td>
+									<td>Canada Water</td>
+									<td>22</td>
+									<td>1234</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>2/1/19</td>
+									<td>Pants</td>
+									<td>Cash</td>
+									<td>Helen</td>
+									<td>Merrills</td>
+									<td>Spring</td>
+									<td>London Bridge</td>
+									<td>23</td>
+									<td>1235</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>3/1/19</td>
+									<td>T-Shirt</td>
+									<td>Card</td>
+									<td>Sarah</td>
+									<td>Whittaker</td>
+									<td>Summer</td>
+									<td>Northhampton</td>
+									<td>24</td>
+									<td>1236</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>4/1/19</td>
+									<td>Shoes</td>
+									<td>Card</td>
+									<td>Judy</td>
+									<td>Raper</td>
+									<td>Rainbow</td>
+									<td>Canada Water</td>
+									<td>22</td>
+									<td>1234</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>5/1/19</td>
+									<td>Socks</td>
+									<td>Cash</td>
+									<td>Jaz</td>
+									<td>Crocker</td>
+									<td>Snow</td>
+									<td>Waterloo</td>
+									<td>26</td>
+									<td>1237</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>6/1/19</td>
+									<td>Dress</td>
+									<td>Card</td>
+									<td>Sarah</td>
+									<td>Whittaker</td>
+									<td>Summer</td>
+									<td>Northhampton</td>
+									<td>24</td>
+									<td>1236</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>7/1/19</td>
+									<td>Active Wear</td>
+									<td>Cash</td>
+									<td>Helen</td>
+									<td>Merrills</td>
+									<td>Spring</td>
+									<td>London Bridge</td>
+									<td>23</td>
+									<td>1235</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>8/1/19</td>
+									<td>Hoodie</td>
+									<td>Card</td>
+									<td>Jaz</td>
+									<td>Crocker</td>
+									<td>Snow</td>
+									<td>Waterloo</td>
+									<td>26</td>
+									<td>1237</td>
+								</tr>
+							</table>
+							<br><br>
+							In order to normalise according to first normal form, we need to identify replication. 
+							<br><br>
+							<h3>Why is replication an issue?</h3>
+							In the case above, let’s say customer 1, moved houses. How many fields would you need to modify to
+							accomodate for such changes?
+							<br><br>
+							Let’s highlight duplicates:<br>
+							<table>
+								<style>
+								td.duplicate {
+									background: lightcoral;
+								}
+								</style>
+								<tr style="font-weight: bold; text-decoration: underline;">
+									<td>CustomerID</td>
+									<td>DateOfPurchase</td>
+									<td>ItemPurchased</td>
+									<td>PaymentMethod</td>
+									<td>FirstName</td>
+									<td>LastName</td>
+									<td>Street</td>
+									<td>Suburb</td>
+									<td>Unit/Street Number</td>
+									<td>Postcode</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>1/1/19</td>
+									<td>Sweater</td>
+									<td>Card</td>
+									<td class="duplicate">Judy</td>
+									<td class="duplicate">Raper</td>
+									<td class="duplicate">Rainbow</td>
+									<td class="duplicate">Canada Water</td>
+									<td class="duplicate">22</td>
+									<td class="duplicate">1234</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>2/1/19</td>
+									<td>Pants</td>
+									<td>Cash</td>
+									<td class="duplicate">Helen</td>
+									<td class="duplicate">Merrills</td>
+									<td class="duplicate">Spring</td>
+									<td class="duplicate">London Bridge</td>
+									<td class="duplicate">23</td>
+									<td class="duplicate">1235</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>3/1/19</td>
+									<td>T-Shirt</td>
+									<td>Card</td>
+									<td class="duplicate">Sarah</td>
+									<td class="duplicate">Whittaker</td>
+									<td class="duplicate">Summer</td>
+									<td class="duplicate">Northhampton</td>
+									<td class="duplicate">24</td>
+									<td class="duplicate">1236</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>4/1/19</td>
+									<td>Shoes</td>
+									<td>Card</td>
+									<td class="duplicate">Judy</td>
+									<td class="duplicate">Raper</td>
+									<td class="duplicate">Rainbow</td>
+									<td class="duplicate">Canada Water</td>
+									<td class="duplicate">22</td>
+									<td class="duplicate">1234</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>5/1/19</td>
+									<td>Socks</td>
+									<td>Cash</td>
+									<td class="duplicate">Jaz</td>
+									<td class="duplicate">Crocker</td>
+									<td class="duplicate">Snow</td>
+									<td class="duplicate">Waterloo</td>
+									<td class="duplicate">26</td>
+									<td class="duplicate">1237</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>6/1/19</td>
+									<td>Dress</td>
+									<td>Card</td>
+									<td class="duplicate">Sarah</td>
+									<td class="duplicate">Whittaker</td>
+									<td class="duplicate">Summer</td>
+									<td class="duplicate">Northhampton</td>
+									<td class="duplicate">24</td>
+									<td class="duplicate">1236</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>7/1/19</td>
+									<td>Active Wear</td>
+									<td>Cash</td>
+									<td class="duplicate">Helen</td>
+									<td class="duplicate">Merrills</td>
+									<td class="duplicate">Spring</td>
+									<td class="duplicate">London Bridge</td>
+									<td class="duplicate">23</td>
+									<td class="duplicate">1235</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>8/1/19</td>
+									<td>Hoodie</td>
+									<td>Card</td>
+									<td class="duplicate">Jaz</td>
+									<td class="duplicate">Crocker</td>
+									<td class="duplicate">Snow</td>
+									<td class="duplicate">Waterloo</td>
+									<td class="duplicate">26</td>
+									<td class="duplicate">1237</td>
+								</tr>
+							</table>
+							<br><br>
+							So let’s bring it into first normal form to avoid these issues.
+							<br><br>
+							<h3>Second Normal Form (2NF)</h3>
+							To bring a database into 2NF you need to consider two rules:
+							<ul>
+								<li>It is in first normal form</li>
+								<li>All non-key attributes are fully functional dependent on the primary key</li>
+							</ul>
+							So that means, this rule only applies to concatenate or composite keys. To re-phrase - each non-key
+							item must depend on the ENTIRE key.
+							<br><br>
+							Ok, so what does that mean? Well let’s consider the previous example. We asked the question, what
+							could be considered a key. There is another alternative. You could use a combination of First Name
+							and Last Name as a composite key. This can only happen if you can guarantee that nobody will have
+							the same name. This generally isn’t a good idea. 
+							<br><br>
+							<table>
+								<tr style="font-weight: bold; text-decoration: underline;">
+									<td>Student ID</td>
+									<td>Grade (%)</td>
+									<td>Course</td>
+									<td>Room Number</td>
+									<td>Tutor In Charge</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>75</td>
+									<td>Databases I</td>
+									<td>Rm4B</td>
+									<td>Bobbie Brown</td>
+								</tr>
+							</table>
 						</div>
 					</p>
 					
-					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-text="You're all done (woo)" tbr-href="index.html">See Answer</a>
+					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-count="3" tbr-text="You're all done (woo)" tbr-href="index.html">See Answer</a>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,10 @@
 /**
  * Really basic, shitty reveal library
  * By Jack Davenport 2020
+ * 
+ * Note: this script includes a debug mode to make development easier
+ * by unhiding the solutions automatically. To enable this, add '?debug=true'
+ * to the end of the URL you are working on.
  */
 
 $(document).ready(() => {

@@ -4,9 +4,16 @@
  */
 
 $(document).ready(() => {
-    let flag = false;
-    let i = 0;
+    // first check if debug is enabled
+    let urlSearch = window.location.search.substring(1);
+    let debugMode = urlSearch.indexOf("debug=true") > -1;
+    if(debugMode) {
+        $("#to-be-revealed").text("WARNING: DEBUG MODE IS ACTIVE!");
+    }
+    // -------------------------------
+    let flag = debugMode;
     let count = $("#to-be-revealed").attr("tbr-count") || 1;
+    let i = debugMode ? count : 0;
     $("#to-be-revealed").click(() => {
         if(flag && i == count) {
             let href = $("#to-be-revealed").attr("tbr-href");
@@ -28,10 +35,12 @@ $(document).ready(() => {
             $("#tbr-hide").slideUp();
         }
     });
-    $("#tbr-hidden").hide();
-    if(count > 1) {
-        for(let i = 1; i <= count; i++) {
-            $("#tbr-hidden-" + i).hide();
+    if(!debugMode) {
+        $("#tbr-hidden").hide();
+        if(count > 1) {
+            for(let i = 1; i <= count; i++) {
+                $("#tbr-hidden-" + i).hide();
+            }
         }
     }
 });

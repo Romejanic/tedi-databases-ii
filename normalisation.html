@@ -709,11 +709,373 @@
 									<td>Rm4B</td>
 									<td>Bobbie Brown</td>
 								</tr>
+								<tr>
+									<td>1</td>
+									<td>82</td>
+									<td>Computational Thinking</td>
+									<td>Rm5D</td>
+									<td>Beni Caiwood</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>84</td>
+									<td>Machine Learning II</td>
+									<td>Rm13C</td>
+									<td>Cleo Callaway</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>84</td>
+									<td>Embedded Systems</td>
+									<td>Rm21E</td>
+									<td>Clive Cao</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>87</td>
+									<td>Circuits I</td>
+									<td>Main Room</td>
+									<td>Delilah Dendy</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>77</td>
+									<td>Ethics II</td>
+									<td>Rm7A</td>
+									<td>Ezra Fittz</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>85</td>
+									<td>Solid Mechanics I</td>
+									<td>Rm6A</td>
+									<td>Fatima Saleh</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>91</td>
+									<td>History of Engineering</td>
+									<td>Rm12F</td>
+									<td>Gabriel Mendoza</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>88</td>
+									<td>Transport II</td>
+									<td>Raper Hall</td>
+									<td>Harriet Ngyuen</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>80</td>
+									<td>Business Analytics II</td>
+									<td>PLuS Lounge</td>
+									<td>Ingrid Blue</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>79</td>
+									<td>Sustainability I</td>
+									<td>Rm1F</td>
+									<td>James Walker</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>83</td>
+									<td>Data Structures II</td>
+									<td>Canada Water Theatre</td>
+									<td>Harry Zhu</td>
+								</tr>
+							</table>
+							<br><br>
+							<div class="md-form">
+								<label for="input3">
+									Consider the following example. The primary key is the Student Number and the Course. What
+									information is not dependent on the ENTIRE key? 
+								</label>
+								<textarea id="input3" class="md-textarea form-control" rows="3"></textarea>
+							</div>
+						</div>
+
+						<div id="tbr-hidden-4">
+							<br>
+							<h3>Answer</h3>
+							<b>Room Number</b> and <b>Tutor in Charge.</b><br>
+							This is only dependent on the course. Regardless of who the student is, the course will be in the same
+							place.
+							<br><br>
+							<h3>Question</h3>
+							<table>
+								<tr style="font-weight: bold; text-decoration: underline;">
+									<td>Student ID</td>
+									<td>Grade (%)</td>
+									<td>Course</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>75</td>
+									<td>Databases I</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>82</td>
+									<td>Computational Thinking</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>84</td>
+									<td>Machine Learning II</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>84</td>
+									<td>Embedded Systems</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>87</td>
+									<td>Circuits I</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>77</td>
+									<td>Ethics II</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>85</td>
+									<td>Solid Mechanics I</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>91</td>
+									<td>History of Engineering</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>88</td>
+									<td>Transport II</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>80</td>
+									<td>Business Analytics II</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>79</td>
+									<td>Sustainability I</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>83</td>
+									<td>Data Structures II</td>
+								</tr>
+							</table>
+							<br><br>
+							<div class="md-form">
+								<label for="input4">
+									Is this table in second normal form?
+								</label>
+								<textarea id="input4" class="md-textarea form-control" rows="3"></textarea>
+							</div>
+						</div>
+
+						<div id="tbr-hidden-5">
+							<br>
+							<h3>Answer</h3>
+							Yes. As there isn’t a composite key and it’s in 1NF, it is also in 2NF.
+							<br><br>
+							<h3>Third Normal Form (3NF)</h3>
+							A database is in 3NF if it’s in second normal form, and if it only has columns that are
+							non-transitively dependent on the primary key. 
+							<br><br>
+							That may not make a lot of sense. To understand it, we should first try to understand what being
+							transitive means. 
+							<br><br>
+							Let’s look at an example of a transitive relationship: <br>
+							3 is smaller than 5. 5 is smaller than 8. Therefore 3 is smaller than 8. 
+							<br><br>
+							Removing the numbers, we’re saying. If A &lt; B and B &lt; C then A &lt; C. &lt; is a transient
+							relationship in this case. 
+							<br><br>
+							Let’s think of an example that is not transient.<br>
+							Bob loves his daughter. Bob’s daughter loves her husband. Bob does not love her daughter’s husband. 
+							<br><br>
+							This relationship is not transient. Just because Bob &#10084; his daughter, and his daughter &#10084;
+							her husband, does not mean Bob loves her husband. 
+							<br><br>
+							In third normal form, the columns cannot be transitively dependent on the primary key. <br>
+							So in the case of 3NF, you can’t have transient dependencies. 
+							<br><br>
+							In general terms: consider column A B and C (Primary Key) . If A relies on C and B relies on C and A
+							relies on B then you can say that  A relies on C through B. In other words, A is transitively dependent
+							on C. 
+							<br><br>
+							Let’s look at a diagram:<br>
+							Consider our 3 entities; A,B and C (Primary Key). 
+							<table style="width: 100%">
+								<style>
+								td img.diagram {
+									width: 100%;
+								}
+								</style>
+								<tr>
+									<td>
+										<img class="diagram" src="images/examples/transient_1.png" />
+										A relies on C (Primary Key). 
+									</td>
+									<td>
+										<img class="diagram" src="images/examples/transient_2.png" />
+										B relies on C (Primary Key). 
+									</td>
+									<td>
+										<img class="diagram" src="images/examples/transient_3.png" />
+										A relies on B. 
+									</td>
+								</tr>
+							</table>
+							<br><br>
+							The path that connects A B and C highlights that, A depends on C <u>THROUGH</u> B. In other words, A is
+							transitively dependent on C.
+							<br>
+							<img class="text-center" src="images/examples/transient_4.png" />
+							<br><br>
+							Let’s consider a few simple database examples:
+							<br><br>
+							<table>
+								<style>
+								tr.db-example td {
+									padding-left: 5px;
+									border: 1px solid lightgray;
+								}
+								</style>
+								<tr class="db-example">
+									<td>Student ID <b>(primary key)</b></td>
+									<td>First Name</td>
+									<td>Surname</td>
+									<td><i>No transitive dependancies</i></td>
+								</tr>
+							</table>
+							<img src="images/examples/student_example.png" />
+							<br><br>
+							<table>
+								<tr class="db-example">
+									<td>Person ID <b>(primary key)</b></td>
+									<td>BMI</td>
+									<td>Overweight?</td>
+									<td><i>Yes, there is a transitive dependancy</i></td>
+								</tr>
+							</table>
+							<img src="images/examples/bmi_example.png" />
+							<br><br>
+							<h3>Activity</h3>
+							<div class="md-form">
+								<label for="input5">
+									Are the following columns Transient or Non-Transient?
+									<br><br>
+									A: PersonID | Height | Gender <br>
+									B: LaptopID | Model | Manufacturer 
+								</label>
+								<textarea id="input5" class="md-textarea form-control" rows="3">
+A:
+
+B:
+
+								</textarea>
+							</div>
+						</div>
+
+						<div id="tbr-hidden-6">
+							<br>
+							<h3>Answer</h3>
+							<b>A:</b> Not Transient. No link between height and gender.<br>
+							<b>B:</b> Transient. Certain manufacturers develop certain models. There is a link. 
+							<br><br>
+
+							<h3>Database Integrity Rules</h3>
+							<ul>
+								<li>
+									<b>Referential Integrity:</b> 
+									Foreign key must have a matching entry in the primary key in the related table or must be
+									null. 
+								</li>
+								<li>
+									<b>Entity Integrity:</b>
+									All records must be unique and the primary key must have a unique value.
+								</li>
+							</ul>
+							<br><br>
+							<h3>Example</h3>
+							Consider the scenario presented in ______. Let’s assume rather than unique identification numbers,
+							each student is given a number that is the first letter of their first name concatenated with the
+							first three letters of their last name.
+							<br>
+							For example Judy Raper would have ID ‘JRap’.
+							<br><br>
+							Examine the following database example:
+							<table>
+								<tr style="font-weight: bold; text-decoration: underline;">
+									<td>Year</td>
+									<td>Grade</td>
+									<td>First Name</td>
+									<td>Last Name</td>
+									<td>Student ID</td>
+								</tr>
+								<tr>
+									<td>1st</td>
+									<td>65</td>
+									<td>Melina</td>
+									<td>Skentsos</td>
+									<td>Mske</td>
+								</tr>
+								<tr>
+									<td>2nd</td>
+									<td>66</td>
+									<td>Christina</td>
+									<td>Stojanovska</td>
+									<td>Csto</td>
+								</tr>
+								<tr>
+									<td>3rd</td>
+									<td>67</td>
+									<td>Kate</td>
+									<td>Mulready</td>
+									<td>Kmul</td>
+								</tr>
+								<tr>
+									<td>1st</td>
+									<td>68</td>
+									<td>Alan</td>
+									<td>Shenfield</td>
+									<td>Ashe</td>
+								</tr>
+								<tr>
+									<td>2nd</td>
+									<td>69</td>
+									<td>Angela</td>
+									<td>Bakiris</td>
+									<td>Abak</td>
+								</tr>
+								<tr>
+									<td>3rd</td>
+									<td>70</td>
+									<td>Andrew</td>
+									<td>Baker</td>
+									<td>Abak</td>
+								</tr>
+								<tr>
+									<td>1st</td>
+									<td>71</td>
+									<td>Melina</td>
+									<td>Skentsos</td>
+									<td>Mske</td>
+								</tr>
 							</table>
 						</div>
 					</p>
 					
-					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-count="3" tbr-text="You're all done (woo)" tbr-href="index.html">See Answer</a>
+					<p><a class="btn btn-primary btn-lg btn-demo" id="to-be-revealed" tbr-count="6" tbr-text="You're all done (woo)" tbr-href="index.html">See Answer</a>
 				</div>
 			</div>
 		</div>
